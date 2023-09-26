@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header/Header'
+import Home from './routes/Home/Home'
 
 function App() {
   return (
@@ -7,13 +8,7 @@ function App() {
 
       <Header />
 
-      <main>
-        
-        <h1>
-          Hello World
-        </h1>
-
-      </main>
+      <Home />
 
     </>
   )

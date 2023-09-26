@@ -39,6 +39,7 @@
 
 html {
   font: var(--font-body);
+  background-color: var(--clr-white-800);
 }
 
 h1 {
