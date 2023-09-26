@@ -1,0 +1,20 @@
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 24px;
+    padding-block: 54px 38px;
+    background-color: var(--clr-black-800);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 101px;
+    height: 4px;
+    background-color: var(--clr-beige-800);
+}
