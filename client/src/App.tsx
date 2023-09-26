@@ -1,4 +1,3 @@
-import './App.css'
 import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Headphones from './routes/Headphones/Headphones'
@@ -6,6 +5,25 @@ import Home from './routes/Home/Home'
 import { Routes, Route } from 'react-router-dom'
 import Speakers from './routes/Speakers/Speakers'
 import Earphones from './routes/Earphones/Earphones'
+import Checkout from './routes/Checkout/Checkout'
+import Product from './routes/Product/Product'
+import NotFound from './routes/NotFound/NotFound'
+import './App.css'
+
+const routes = [
+  {
+    path: '/headphones',
+    component: <Headphones />
+  },
+  {
+    path: '/speakers',
+    component: <Speakers />
+  },
+  {
+    path: '/earphones',
+    component: <Earphones />
+  }
+]
 
 function App() {
   return (
@@ -17,11 +35,19 @@ function App() {
 
         <Route path='/' element={<Home />} />
 
-        <Route path='/headphones' element={<Headphones />} />
+        {routes.map((route, idx) => (
+          <Route path={route.path} key={idx}>
 
-        <Route path='/speakers' element={<Speakers />} />
+            <Route index element={route.component} />
 
-        <Route path='/earphones' element={<Earphones />} />
+            <Route path=':product' element={<Product />} />
+          
+          </Route>
+        ))}
+
+        <Route path='/checkout' element={<Checkout />} />
+
+        <Route path='/*' element={<NotFound />} />
 
       </Routes>
 
