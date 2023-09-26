@@ -33,3 +33,23 @@
     font-weight: bold;
     letter-spacing: 2px;
 }
+
+.footer p {
+    font: var(--font-body);
+    color: var(--clr-white-900);
+    opacity: 0.5;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.socials button {
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    border: none;
+}
