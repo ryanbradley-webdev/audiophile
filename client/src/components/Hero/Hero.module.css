@@ -16,8 +16,11 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    text-transform: uppercase;
     color: var(--clr-white-900);
+}
+
+.hero_content h1 {
+    text-transform: uppercase;
 }
 
 .hero_content h2 {
@@ -25,4 +28,11 @@
     font-weight: 400;
     letter-spacing: 10px;
     opacity: 0.5;
+}
+
+.hero_content p {
+    margin-top: 24px;
+    margin-bottom: 28px;
+    margin-inline: 24px;
+    opacity: 0.75;
 }
