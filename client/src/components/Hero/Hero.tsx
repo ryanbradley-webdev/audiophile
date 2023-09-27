@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import styles from './Hero.module.css'
 
@@ -31,9 +32,15 @@ export default function Hero() {
 
                 <Button
                     type='button'
-                    variant=''
+                    variant='solid'
                 >
-                    SEE PRODUCT
+                    
+                    <Link
+                        to='/headphones/xx99'
+                    >
+                        SEE PRODUCT
+                    </Link>
+
                 </Button>
 
             </div>

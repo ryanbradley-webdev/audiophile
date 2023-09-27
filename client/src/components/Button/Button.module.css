@@ -1,5 +1,27 @@
 .button {
+    height: 48px;
+    padding-inline: 30px;
     font: inherit;
     border: none;
     border-radius: 0;
+    font: var(--font-sub);
+    letter-spacing: var(--space-sub);
+}
+
+.solid {
+    background-color: var(--clr-beige-800);
+}
+
+.solid,
+.solid > a {
+    color: var(--clr-white-900);
+}
+
+.button:has(a) {
+    padding-inline: 0;
+}
+
+.button > a {
+    padding-inline: 30px;
+    width: 100%;
 }

@@ -1,8 +1,8 @@
 import styles from './Button.module.css'
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-    variant: string
-    type: 'button' | 'submit'
+    variant: 'solid' | 'outline'
+    type?: 'button' | 'submit'
     disabled?: boolean
 }
 
@@ -16,7 +16,7 @@ export default function Button({
         <button
             type={type}
             disabled={disabled}
-            className={`${styles.button} ${variant}`}
+            className={`${styles.button} ${styles[variant]}`}
             {...props}
         >
 
