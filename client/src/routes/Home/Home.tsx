@@ -1,10 +1,11 @@
+import Hero from '../../components/Hero/Hero'
 import styles from './Home.module.css'
 
 export default function Home() {
     return (
         <main>
 
-            <img src='/hero-mobile.png' alt='' className={styles.img} />
+            <Hero />
 
         </main>
     )

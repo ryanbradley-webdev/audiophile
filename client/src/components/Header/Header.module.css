@@ -8,4 +8,5 @@
     padding-inline: 24px;
     padding-block: 32px;
     border-bottom: 1px solid var(--clr-white-100);
+    z-index: 20;
 }
