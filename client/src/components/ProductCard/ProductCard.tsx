@@ -4,13 +4,12 @@ import styles from './ProductCard.module.css'
 
 export default function ProductCard({
     name,
+    slug,
     preview_img,
     category,
     description,
     isNew
-}: Product & {
-    index: number
-}) {
+}: Product) {
 
 
     return (
@@ -49,7 +48,7 @@ export default function ProductCard({
                 >
 
                     <Link
-                        to={name.replace(/ /g, '-').toLowerCase()}
+                        to={slug}
                     >
                         SEE PRODUCT
                     </Link>

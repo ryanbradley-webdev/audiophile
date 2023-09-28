@@ -6,10 +6,9 @@ export default function Headphones() {
     return (
         <CategorySection>
             
-            {SAMPLE_DATA.filter(item => item.category === 'headphones').reverse().map((item, idx) => (
+            {SAMPLE_DATA.filter(item => item.category === 'headphones').reverse().map(item => (
                 <ProductCard
                     key={item.id}
-                    index={idx}
                     {...item}
                 />
             ))}

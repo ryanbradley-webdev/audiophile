@@ -1,10 +1,17 @@
 import CategorySection from "../../components/CategorySection/CategorySection"
+import ProductCard from "../../components/ProductCard/ProductCard"
+import { SAMPLE_DATA } from "../../sample-data/data"
 
 export default function Earphones() {
     return (
         <CategorySection>
 
-            Earphones
+            {SAMPLE_DATA.filter(item => item.category === 'earphones').reverse().map(item => (
+                <ProductCard
+                    key={item.id}
+                    {...item}
+                />
+            ))}
             
         </CategorySection>
     )
