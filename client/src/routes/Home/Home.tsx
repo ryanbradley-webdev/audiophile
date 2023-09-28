@@ -4,6 +4,7 @@ import Hero from '../../components/Hero/Hero'
 import Nav from '../../components/Nav/Nav'
 import ZX9 from './images/image-speaker-zx9.png'
 import ZX7 from './images/image-speaker-zx7.jpg'
+import YX1 from './images/image-earphones-yx1.jpg'
 import Background from '/pattern-circles.svg'
 import styles from './Home.module.css'
 
@@ -90,6 +91,37 @@ export default function Home() {
 
                     </Button>
 
+                </div>
+
+                <div
+                    className={styles.third_product}
+                >
+
+                    <img
+                        src={YX1}
+                        alt=""
+                    />
+
+                    <div>
+
+                        <h4>
+                            YX1 EARPHONES
+                        </h4>
+
+                        <Button
+                            variant='outline'
+                        >
+
+                            <Link
+                                to='/earphones/yx1'
+                            >
+                                SEE PRODUCT
+                            </Link>
+
+                        </Button>
+
+                    </div>
+                    
                 </div>
 
             </section>
