@@ -49,7 +49,7 @@ export default function ProductCard({
                 >
 
                     <Link
-                        to={name}
+                        to={name.replace(/ /g, '-').toLowerCase()}
                     >
                         SEE PRODUCT
                     </Link>
