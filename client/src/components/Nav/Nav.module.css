@@ -10,6 +10,8 @@
 
 .link {
     position: relative;
+    padding-bottom: 22px;
+    color: var(--clr-black-900);
     text-align: center;
     text-transform: uppercase;
     isolation: isolate;
@@ -19,8 +21,9 @@
     content: '';
     position: absolute;
     inset: 0;
-    top: 52px;
+    top: 48px;
     background-color: var(--clr-white-700);
+    border-radius: 8px;
     z-index: -1;
 }
 
@@ -28,5 +31,19 @@
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 1.07px;
-    margin-block: 17px;
+    margin-top: -20px;
+    margin-bottom: 10px;
+}
+
+.shop_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+.shop_btn span {
+    font: var(--font-sub);
+    letter-spacing: var(--space-sub);
+    opacity: 0.5;
 }
