@@ -39,7 +39,7 @@ function NavItem({
 
     return (
         <Link
-            to={path}
+            to={'/' + path}
             className={styles.link}
         >
 

@@ -1,9 +1,11 @@
-import styles from './Speakers.module.css'
+import CategorySection from "../../components/CategorySection/CategorySection"
 
 export default function Speakers() {
     return (
-        <section>
+        <CategorySection>
+
             Speakers
-        </section>
+            
+        </CategorySection>
     )
 }

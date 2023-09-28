@@ -1,9 +1,11 @@
-import styles from './Headphones.module.css'
+import CategorySection from "../../components/CategorySection/CategorySection";
 
 export default function Headphones() {
     return (
-        <section>
+        <CategorySection>
+            
             Headphones
-        </section>
+
+        </CategorySection>
     )
 }
