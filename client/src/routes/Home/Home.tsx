@@ -7,6 +7,7 @@ import ZX7 from './images/image-speaker-zx7.jpg'
 import YX1 from './images/image-earphones-yx1.jpg'
 import Background from '/pattern-circles.svg'
 import styles from './Home.module.css'
+import AboutCard from '../../components/AboutCard/AboutCard'
 
 export default function Home() {
     return (
@@ -125,6 +126,8 @@ export default function Home() {
                 </div>
 
             </section>
+
+            <AboutCard />
 
         </main>
     )
