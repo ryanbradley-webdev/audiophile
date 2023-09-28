@@ -31,8 +31,8 @@ export default function Hero() {
                 </p>
 
                 <Button
-                    type='button'
                     variant='solid'
+                    color='beige'
                 >
                     
                     <Link

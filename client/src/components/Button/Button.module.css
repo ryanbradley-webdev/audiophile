@@ -8,12 +8,18 @@
     letter-spacing: var(--space-sub);
 }
 
-.solid {
+.beige {
     background-color: var(--clr-beige-800);
 }
 
-.solid,
-.solid > a {
+.black {
+    background-color: var(--clr-black-900);
+}
+
+.beige,
+.black,
+.beige > a,
+.black > a {
     color: var(--clr-white-900);
 }
 

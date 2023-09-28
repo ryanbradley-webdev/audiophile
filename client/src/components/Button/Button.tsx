@@ -1,13 +1,19 @@
 import styles from './Button.module.css'
 
-interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
-    variant: 'solid' | 'outline'
+type ButtonProps = React.HTMLAttributes<HTMLButtonElement> & {
+    color?: 'beige' | 'black'
     type?: 'button' | 'submit'
     disabled?: boolean
-}
+} & ({
+    variant: 'solid'
+    color: 'beige' | 'black'
+} | {
+    variant: 'outline'
+})
 
 export default function Button({
     variant,
+    color,
     type,
     disabled,
     ...props
@@ -16,7 +22,7 @@ export default function Button({
         <button
             type={type}
             disabled={disabled}
-            className={`${styles.button} ${styles[variant]}`}
+            className={`${styles.button} ${variant === 'solid' && styles[color]}`}
             {...props}
         >
 
