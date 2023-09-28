@@ -8,8 +8,8 @@ import Earphones from './routes/Earphones/Earphones'
 import Checkout from './routes/Checkout/Checkout'
 import Product from './routes/Product/Product'
 import NotFound from './routes/NotFound/NotFound'
-import './App.css'
 import CategoryPageWrapper from './components/CategoryPageWrapper/CategoryPageWrapper'
+import './App.css'
 
 const routes = [
   {
@@ -41,7 +41,7 @@ function App() {
 
             <Route index element={route.component} />
 
-            <Route path=':product' element={<Product />} />
+            <Route path=':slug' element={<Product />} />
           
           </Route>
         ))}

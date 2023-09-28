@@ -1,9 +1,91 @@
+import YX1ProductDesktop from './product-images/product-yx1-earphones/desktop/image-product.jpg'
+import YX1ProductTablet from './product-images/product-yx1-earphones/tablet/image-product.jpg'
+import YX1ProductMobile from './product-images/product-yx1-earphones/mobile/image-product.jpg'
+import YX1G1Desktop from './product-images/product-yx1-earphones/desktop/image-gallery-1.jpg'
+import YX1G2Desktop from './product-images/product-yx1-earphones/desktop/image-gallery-2.jpg'
+import YX1G3Desktop from './product-images/product-yx1-earphones/desktop/image-gallery-3.jpg'
+import YX1G1Tablet from './product-images/product-yx1-earphones/tablet/image-gallery-1.jpg'
+import YX1G2Tablet from './product-images/product-yx1-earphones/tablet/image-gallery-2.jpg'
+import YX1G3Tablet from './product-images/product-yx1-earphones/tablet/image-gallery-3.jpg'
+import YX1G1Mobile from './product-images/product-yx1-earphones/mobile/image-gallery-1.jpg'
+import YX1G2Mobile from './product-images/product-yx1-earphones/mobile/image-gallery-2.jpg'
+import YX1G3Mobile from './product-images/product-yx1-earphones/mobile/image-gallery-3.jpg'
+
+import XX59ProductDesktop from './product-images/product-xx59-headphones/desktop/image-product.jpg'
+import XX59ProductTablet from './product-images/product-xx59-headphones/tablet/image-product.jpg'
+import XX59ProductMobile from './product-images/product-xx59-headphones/mobile/image-product.jpg'
+import XX59G1Desktop from './product-images/product-xx59-headphones/desktop/image-gallery-1.jpg'
+import XX59G2Desktop from './product-images/product-xx59-headphones/desktop/image-gallery-2.jpg'
+import XX59G3Desktop from './product-images/product-xx59-headphones/desktop/image-gallery-3.jpg'
+import XX59G1Tablet from './product-images/product-xx59-headphones/tablet/image-gallery-1.jpg'
+import XX59G2Tablet from './product-images/product-xx59-headphones/tablet/image-gallery-2.jpg'
+import XX59G3Tablet from './product-images/product-xx59-headphones/tablet/image-gallery-3.jpg'
+import XX59G1Mobile from './product-images/product-xx59-headphones/mobile/image-gallery-1.jpg'
+import XX59G2Mobile from './product-images/product-xx59-headphones/mobile/image-gallery-2.jpg'
+import XX59G3Mobile from './product-images/product-xx59-headphones/mobile/image-gallery-3.jpg'
+
+import XX991ProductDesktop from './product-images/product-xx99-mark-one-headphones/desktop/image-product.jpg'
+import XX991ProductTablet from './product-images/product-xx99-mark-one-headphones/tablet/image-product.jpg'
+import XX991ProductMobile from './product-images/product-xx99-mark-one-headphones/mobile/image-product.jpg'
+import XX991G1Desktop from './product-images/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg'
+import XX991G2Desktop from './product-images/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg'
+import XX991G3Desktop from './product-images/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg'
+import XX991G1Tablet from './product-images/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg'
+import XX991G2Tablet from './product-images/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg'
+import XX991G3Tablet from './product-images/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg'
+import XX991G1Mobile from './product-images/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg'
+import XX991G2Mobile from './product-images/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg'
+import XX991G3Mobile from './product-images/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg'
+
+import XX992ProductDesktop from './product-images/product-xx99-mark-two-headphones/desktop/image-product.jpg'
+import XX992ProductTablet from './product-images/product-xx99-mark-two-headphones/tablet/image-product.jpg'
+import XX992ProductMobile from './product-images/product-xx99-mark-two-headphones/mobile/image-product.jpg'
+import XX992G1Desktop from './product-images/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg'
+import XX992G2Desktop from './product-images/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg'
+import XX992G3Desktop from './product-images/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg'
+import XX992G1Tablet from './product-images/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg'
+import XX992G2Tablet from './product-images/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg'
+import XX992G3Tablet from './product-images/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg'
+import XX992G1Mobile from './product-images/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg'
+import XX992G2Mobile from './product-images/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg'
+import XX992G3Mobile from './product-images/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg'
+
+import ZX7ProductDesktop from './product-images/product-zx7-speaker/desktop/image-product.jpg'
+import ZX7ProductTablet from './product-images/product-zx7-speaker/tablet/image-product.jpg'
+import ZX7ProductMobile from './product-images/product-zx7-speaker/mobile/image-product.jpg'
+import ZX7G1Desktop from './product-images/product-zx7-speaker/desktop/image-gallery-1.jpg'
+import ZX7G2Desktop from './product-images/product-zx7-speaker/desktop/image-gallery-2.jpg'
+import ZX7G3Desktop from './product-images/product-zx7-speaker/desktop/image-gallery-3.jpg'
+import ZX7G1Tablet from './product-images/product-zx7-speaker/tablet/image-gallery-1.jpg'
+import ZX7G2Tablet from './product-images/product-zx7-speaker/tablet/image-gallery-2.jpg'
+import ZX7G3Tablet from './product-images/product-zx7-speaker/tablet/image-gallery-3.jpg'
+import ZX7G1Mobile from './product-images/product-zx7-speaker/mobile/image-gallery-1.jpg'
+import ZX7G2Mobile from './product-images/product-zx7-speaker/mobile/image-gallery-2.jpg'
+import ZX7G3Mobile from './product-images/product-zx7-speaker/mobile/image-gallery-3.jpg'
+
+import ZX9ProductDesktop from './product-images/product-zx9-speaker/desktop/image-product.jpg'
+import ZX9ProductTablet from './product-images/product-zx9-speaker/tablet/image-product.jpg'
+import ZX9ProductMobile from './product-images/product-zx9-speaker/mobile/image-product.jpg'
+import ZX9G1Desktop from './product-images/product-zx9-speaker/desktop/image-gallery-1.jpg'
+import ZX9G2Desktop from './product-images/product-zx9-speaker/desktop/image-gallery-2.jpg'
+import ZX9G3Desktop from './product-images/product-zx9-speaker/desktop/image-gallery-3.jpg'
+import ZX9G1Tablet from './product-images/product-zx9-speaker/tablet/image-gallery-1.jpg'
+import ZX9G2Tablet from './product-images/product-zx9-speaker/tablet/image-gallery-2.jpg'
+import ZX9G3Tablet from './product-images/product-zx9-speaker/tablet/image-gallery-3.jpg'
+import ZX9G1Mobile from './product-images/product-zx9-speaker/mobile/image-gallery-1.jpg'
+import ZX9G2Mobile from './product-images/product-zx9-speaker/mobile/image-gallery-2.jpg'
+import ZX9G3Mobile from './product-images/product-zx9-speaker/mobile/image-gallery-3.jpg'
+
 export const SAMPLE_DATA: Product[] = [
   {
     id: '1',
     slug: "yx1-earphones",
     name: "YX1 Wireless",
-    image: '',
+    image: {
+      desktop: YX1ProductDesktop,
+      tablet: YX1ProductTablet,
+      mobile: YX1ProductMobile
+    },
     category: "earphones",
     preview_img: '/yx1-category-preview.jpg',
     isNew: true,
@@ -32,13 +114,33 @@ export const SAMPLE_DATA: Product[] = [
         item: "Travel pouch"
       }
     ],
-    gallery: []
+    gallery: {
+      desktop: [
+        YX1G1Desktop,
+        YX1G2Desktop,
+        YX1G3Desktop
+      ],
+      tablet: [
+        YX1G1Tablet,
+        YX1G2Tablet,
+        YX1G3Tablet
+      ],
+      mobile: [
+        YX1G1Mobile,
+        YX1G2Mobile,
+        YX1G3Mobile
+      ]
+    }
   },
   {
     id: '2',
     slug: "xx59-headphones",
     name: "XX59",
-    image: '',
+    image: {
+      desktop: XX59ProductDesktop,
+      tablet: XX59ProductTablet,
+      mobile: XX59ProductMobile
+    },
     category: "headphones",
     preview_img: '/x59-category-preview.jpg',
     isNew: false,
@@ -63,13 +165,33 @@ export const SAMPLE_DATA: Product[] = [
         item: "3.5mm 5m audio cable"
       }
     ],
-    gallery: []
+    gallery: {
+      desktop: [
+        XX59G1Desktop,
+        XX59G2Desktop,
+        XX59G3Desktop
+      ],
+      tablet: [
+        XX59G1Tablet,
+        XX59G2Tablet,
+        XX59G3Tablet
+      ],
+      mobile: [
+        XX59G1Mobile,
+        XX59G2Mobile,
+        XX59G3Mobile
+      ]
+    }
   },
   {
     id: '3',
     slug: "xx99-mark-one-headphones",
     name: "XX99 Mark I",
-    image: '',
+    image: {
+      desktop: XX991ProductDesktop,
+      tablet: XX991ProductTablet,
+      mobile: XX991ProductMobile
+    },
     category: "headphones",
     preview_img: '/x99-mark-one-category-preview.jpg',
     isNew: false,
@@ -94,13 +216,33 @@ export const SAMPLE_DATA: Product[] = [
         item: "3.5mm 5m audio cable"
       }
     ],
-    gallery: []
+    gallery: {
+      desktop: [
+        XX991G1Desktop,
+        XX991G2Desktop,
+        XX991G3Desktop
+      ],
+      tablet: [
+        XX991G1Tablet,
+        XX991G2Tablet,
+        XX991G3Tablet
+      ],
+      mobile: [
+        XX991G1Mobile,
+        XX991G2Mobile,
+        XX991G3Mobile
+      ]
+    }
   },
   {
     id: '4',
     slug: "xx99-mark-two-headphones",
     name: "XX99 Mark II",
-    image: '',
+    image: {
+      desktop: XX992ProductDesktop,
+      tablet: XX992ProductTablet,
+      mobile: XX992ProductMobile
+    },
     category: "headphones",
     preview_img: '/x99-mark-two-category-preview.jpg',
     isNew: true,
@@ -129,13 +271,33 @@ export const SAMPLE_DATA: Product[] = [
         item: "Travel bag"
       }
     ],
-    gallery: []
+    gallery: {
+      desktop: [
+        XX992G1Desktop,
+        XX992G2Desktop,
+        XX992G3Desktop
+      ],
+      tablet: [
+        XX992G1Tablet,
+        XX992G2Tablet,
+        XX992G3Tablet
+      ],
+      mobile: [
+        XX992G1Mobile,
+        XX992G2Mobile,
+        XX992G3Mobile
+      ]
+    }
   },
   {
     id: '5',
     slug: "zx7-speaker",
     name: "ZX7",
-    image: '',
+    image: {
+      desktop: ZX7ProductDesktop,
+      tablet: ZX7ProductTablet,
+      mobile: ZX7ProductMobile
+    },
     category: "speakers",
     preview_img: '/zx7-category-preview.jpg',
     isNew: false,
@@ -164,13 +326,33 @@ export const SAMPLE_DATA: Product[] = [
         item: "7.5m optical cable"
       }
     ],
-    gallery: []
+    gallery: {
+      desktop: [
+        ZX7G1Desktop,
+        ZX7G2Desktop,
+        ZX7G3Desktop
+      ],
+      tablet: [
+        ZX7G1Tablet,
+        ZX7G2Tablet,
+        ZX7G3Tablet
+      ],
+      mobile: [
+        ZX7G1Mobile,
+        ZX7G2Mobile,
+        ZX7G3Mobile
+      ]
+    }
   },
   {
     id: '6',
     slug: "zx9-speaker",
     name: "ZX9",
-    image: '',
+    image: {
+      desktop: ZX9ProductDesktop,
+      tablet: ZX9ProductTablet,
+      mobile: ZX9ProductMobile
+    },
     category: "speakers",
     preview_img: 'zx9-category-preview.jpg',
     isNew: true,
@@ -199,6 +381,22 @@ export const SAMPLE_DATA: Product[] = [
         item: "10m optical cable"
       }
     ],
-    gallery: []
+    gallery: {
+      desktop: [
+        ZX9G1Desktop,
+        ZX9G2Desktop,
+        ZX9G3Desktop
+      ],
+      tablet: [
+        ZX9G1Tablet,
+        ZX9G2Tablet,
+        ZX9G3Tablet
+      ],
+      mobile: [
+        ZX9G1Mobile,
+        ZX9G2Mobile,
+        ZX9G3Mobile
+      ]
+    }
   }
 ]

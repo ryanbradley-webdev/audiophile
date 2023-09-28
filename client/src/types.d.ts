@@ -5,12 +5,20 @@ type Product = {
     name: string
     slug: string
     category: Path
-    image: string
+    image: {
+        desktop: string
+        tablet: string
+        mobile: string
+    }
     preview_img: string
     description: string
     features: string
     isNew: boolean
     price: number
     includes: { quantity: number, item: string }[]
-    gallery: []
+    gallery: {
+        desktop: string[]
+        tablet: string[]
+        mobile: string[]
+    }
 }
