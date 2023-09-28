@@ -9,7 +9,7 @@ type Product = {
     preview_img: string
     description: string
     features: string
-    new: boolean
+    isNew: boolean
     price: number
     includes: { quantity: number, item: string }[]
     gallery: []

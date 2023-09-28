@@ -7,7 +7,7 @@ export default function ProductCard({
     preview_img,
     category,
     description,
-    index
+    isNew
 }: Product & {
     index: number
 }) {
@@ -29,7 +29,7 @@ export default function ProductCard({
                 className={styles.content}
             >
 
-                {!index && (
+                {isNew && (
                     <h6>
                         NEW PRODUCT
                     </h6>
