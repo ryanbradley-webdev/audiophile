@@ -1,0 +1,4 @@
+.card h3 {
+    font: var(--font-product-head);
+    letter-spacing: var(--space-product-head);
+}

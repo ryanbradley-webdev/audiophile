@@ -24,6 +24,7 @@
   --font-h4: bold 28px/38px var(--font-fam);
   --font-h5: bold 24px/33px var(--font-fam);
   --font-h6: bold 18px/24px var(--font-fam);
+  --font-product-head: bold 28px var(--font-fam);
   --font-overline: 14px/19px var(--font-fam);
   --font-sub: bold 13px/25px var(--font-fam);
   --font-body: 400 15px/25px var(--font-fam);
@@ -33,6 +34,7 @@
   --space-h4: 2px;
   --space-h5: 1.7px;
   --space-h6: 1.3px;
+  --space-product-head: 1px;
   --space-overline: 10px;
   --space-sub: 1px;
 }
@@ -40,7 +42,9 @@
 @media screen and (min-width: 481px) {
   :root {
     --font-h1: bold 56px/58px var(--font-fam);
+    --font-product-head: bold 40px/44px var(--font-fam);
     --space-h1: 2px;
+    --space-product-head: 1.43px;
   }
 }
 
