@@ -9,6 +9,7 @@
     padding-block: 32px;
     border-bottom: 1px solid var(--clr-white-100);
     z-index: 20;
+    transition: all 0.15s ease;
 }
 
 .header nav {

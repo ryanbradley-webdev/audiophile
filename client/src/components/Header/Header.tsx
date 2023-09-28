@@ -4,9 +4,12 @@ import Hamburger from '../../assets/Hamburger'
 import Logo from '../../assets/Logo'
 import Nav from '../Nav/Nav'
 import styles from './Header.module.css'
+import { useLocation } from 'react-router-dom'
 
 export default function Header() {
     const [menuVisible, setMenuVisible] = useState(false)
+
+    const location = useLocation()
 
     const handleToggleMenu = () => {
         setMenuVisible(!menuVisible)
@@ -15,6 +18,9 @@ export default function Header() {
     return (
         <header
             className={styles.header}
+            style={{
+                backgroundColor: location.pathname === '/' ? '' : 'var(--clr-black-900)'
+            }}
         >
 
             <Hamburger
