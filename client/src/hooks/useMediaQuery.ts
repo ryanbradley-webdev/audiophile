@@ -1,21 +1,17 @@
-import { useState, useEffect, experimental_useEffectEvent as useEffectEvent } from "react"
+import { useSyncExternalStore } from "react"
 
-export default function useMediaQuery({
-    query
-}: {
-    query: string
-}) {
-    const [matches, setMatches] = useState(window.matchMedia(query).matches)
+export default function useMediaQuery(query: string) {
+    const getSnapshot = () => {
+        return window.matchMedia(query).matches
+    }
 
-    const listener = useEffectEvent(() => {
-        setMatches(window.matchMedia(query).matches)
-    })
+    const subscribe = (cb: () => void) => {
+        window.addEventListener('resize', cb)
 
-    useEffect(() => {
-        window.addEventListener('resize', listener)
+        return () => window.removeEventListener('resize', cb)
+    }
 
-        return window.removeEventListener('resize', listener)
-    }, [])
+    const matches = useSyncExternalStore(subscribe, getSnapshot)
 
     return matches
 }
