@@ -1,11 +1,13 @@
 import Hero from '../../components/Hero/Hero'
-import styles from './Home.module.css'
+import Nav from '../../components/Nav/Nav'
 
 export default function Home() {
     return (
         <main>
 
             <Hero />
+
+            <Nav />
 
         </main>
     )
