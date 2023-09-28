@@ -1,0 +1,32 @@
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+    padding-inline: 24px;
+    margin-block: 40px;
+    width: 100%;
+}
+
+.link {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    isolation: isolate;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 52px;
+    background-color: var(--clr-white-700);
+    z-index: -1;
+}
+
+.link h6 {
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1.07px;
+    margin-block: 17px;
+}

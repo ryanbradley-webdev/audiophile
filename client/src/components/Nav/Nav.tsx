@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import styles from './Nav.module.css'
+import RightArrowIcon from '../../assets/RightArrowIcon'
 
 export default function Nav() {
     const items: Path[] = [
@@ -8,7 +10,9 @@ export default function Nav() {
     ]
 
     return (
-        <nav>
+        <nav
+            className={styles.nav}
+        >
             
             {
                 items.map((item, idx) => (
@@ -28,9 +32,22 @@ function NavItem({
     return (
         <Link
             to={path}
+            className={styles.link}
         >
         
-            {path}
+            <h6>
+                {path}
+            </h6>
+
+            <div>
+                
+                <span>
+                    SHOP
+                </span>
+
+                <RightArrowIcon />
+
+            </div>
         
         </Link>
     )
