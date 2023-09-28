@@ -3,6 +3,7 @@ import Button from '../../components/Button/Button'
 import Hero from '../../components/Hero/Hero'
 import Nav from '../../components/Nav/Nav'
 import ZX9 from './images/image-speaker-zx9.png'
+import Background from '/pattern-circles.svg'
 import styles from './Home.module.css'
 
 export default function Home() {
@@ -23,12 +24,24 @@ export default function Home() {
                     className={styles.featured_product}
                 >
 
-                    <img
-                        src={ZX9}
-                        alt='zx9'
-                        width='50%'
-                        height='auto'
-                    />
+                    <div
+                        className={styles.img_container}
+                    >
+
+                        <img
+                            src={Background}
+                            alt=''
+                            className={styles.background}
+                        />
+
+                        <img
+                            src={ZX9}
+                            alt='zx9'
+                            width='50%'
+                            height='auto'
+                        />
+
+                    </div>
 
                     <h2>
                         ZX9<br />SPEAKER

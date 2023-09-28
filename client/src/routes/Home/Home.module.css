@@ -19,14 +19,26 @@
     color: var(--clr-white-900);
     background-color: var(--clr-beige-800);
     border-radius: 8px;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.img_container {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 170%;
+    z-index: -1;
 }
 
 .featured_product p {
     opacity: 0.75;
-}
-
-.featured_product img {
-    margin-bottom: 12px;
 }
 
 @media screen and (max-width: 769px) {
