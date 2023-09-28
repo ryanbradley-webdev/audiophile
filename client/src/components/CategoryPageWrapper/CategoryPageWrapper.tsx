@@ -26,13 +26,13 @@ export default function CategoryPageWrapper() {
         <main>
 
             {
-                (location.pathname === '/headphones' ||
-                location.pathname === '/speakers' ||
-                location.pathname === '/earphones') && (
+                (location.pathname === '/headphones' || location.pathname === '/speakers' || location.pathname === '/earphones') && (
                     <div style={localStyles.div}>
+
                         <h2 style={localStyles.h2}>
                             {location.pathname.replace('/', '').toUpperCase()}
                         </h2>
+                        
                     </div>
                 )
             }

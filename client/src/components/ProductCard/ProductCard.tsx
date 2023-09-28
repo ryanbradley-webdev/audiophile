@@ -1,8 +1,11 @@
+import { Link } from 'react-router-dom'
+import Button from '../Button/Button'
 import styles from './ProductCard.module.css'
 
 export default function ProductCard({
     name,
     preview_img,
+    category,
     description,
     index
 }: Product & {
@@ -22,19 +25,38 @@ export default function ProductCard({
                 height='auto'
             />
 
-            {!index && (
-                <h6>
-                    NEW PRODUCT
-                </h6>
-            )}
+            <div
+                className={styles.content}
+            >
 
-            <h3>
-                {name.toUpperCase()}
-            </h3>
+                {!index && (
+                    <h6>
+                        NEW PRODUCT
+                    </h6>
+                )}
 
-            <p>
-                {description}
-            </p>
+                <h3>
+                    {name.toUpperCase()}<br />{category.toUpperCase()}
+                </h3>
+
+                <p>
+                    {description}
+                </p>
+
+                <Button
+                    variant='solid'
+                    color='beige'
+                >
+
+                    <Link
+                        to={name}
+                    >
+                        SEE PRODUCT
+                    </Link>
+
+                </Button>
+
+            </div>
 
         </div>
     )

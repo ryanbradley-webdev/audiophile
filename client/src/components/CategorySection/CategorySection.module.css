@@ -1,3 +1,5 @@
 .section {
     display: grid;
+    row-gap: 120px;
+    margin-top: 64px;
 }

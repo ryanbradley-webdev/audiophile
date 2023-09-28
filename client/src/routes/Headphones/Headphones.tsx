@@ -4,24 +4,24 @@ import ProductCard from "../../components/ProductCard/ProductCard"
 const PLACEHOLDER_HEADPHONES: Product[] = [
     {
         id: '1',
-        name: 'X99 Mark II',
+        name: 'XX99 Mark II',
         preview_img: '/x99-mark-two-category-preview.jpg',
         category: 'headphones',
-        description: ''
+        description: 'The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.'
     },
     {
         id: '2',
-        name: 'X99 Mark I',
+        name: 'XX99 Mark I',
         preview_img: '/x99-mark-one-category-preview.jpg',
         category: 'headphones',
-        description: ''
+        description: 'As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.'
     },
     {
         id: '3',
-        name: 'X59',
+        name: 'XX59',
         preview_img: '/x59-category-preview.jpg',
         category: 'headphones',
-        description: ''
+        description: 'Enjoy your audio almost anywhere and customize it to your specific tastess with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.'
     }
 ]
 

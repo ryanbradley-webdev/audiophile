@@ -1,4 +1,35 @@
-.card h3 {
+.card {
+    display: grid;
+    row-gap: 32px;
+    padding-inline: 24px;
+}
+
+.card img {
+    border-radius: 8px;
+}
+
+.content {
+    display: grid;
+    row-gap: 24px;
+    text-align: center;
+}
+
+.content h3 {
     font: var(--font-product-head);
     letter-spacing: var(--space-product-head);
+}
+
+.content h6 {
+    color: var(--clr-beige-800);
+    font: var(--font-overline);
+    letter-spacing: var(--space-overline);
+}
+
+.content p {
+    opacity: 0.5;
+}
+
+.content button {
+    width: fit-content;
+    margin-inline: auto;
 }
