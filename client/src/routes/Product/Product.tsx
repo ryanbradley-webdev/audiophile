@@ -2,8 +2,8 @@ import styles from './Product.module.css'
 
 export default function Product() {
     return (
-        <main>
+        <section>
             Product
-        </main>
+        </section>
     )
 }

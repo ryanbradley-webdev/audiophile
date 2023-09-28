@@ -9,6 +9,7 @@ import Checkout from './routes/Checkout/Checkout'
 import Product from './routes/Product/Product'
 import NotFound from './routes/NotFound/NotFound'
 import './App.css'
+import CategoryPageWrapper from './components/CategoryPageWrapper/CategoryPageWrapper'
 
 const routes = [
   {
@@ -36,7 +37,7 @@ function App() {
         <Route path='/' element={<Home />} />
 
         {routes.map((route, idx) => (
-          <Route path={route.path} key={idx}>
+          <Route path={route.path} element={<CategoryPageWrapper />} key={idx}>
 
             <Route index element={route.component} />
 
