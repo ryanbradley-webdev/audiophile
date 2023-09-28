@@ -1,3 +1,36 @@
 .main {
     padding-top: 0;
 }
+
+.products {
+    display: grid;
+    row-gap: 24px;
+    padding-inline: 24px;
+    margin-block: 120px;
+}
+
+.featured_product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding-inline: 24px;
+    padding-block: 55px;
+    color: var(--clr-white-900);
+    background-color: var(--clr-beige-800);
+    border-radius: 8px;
+}
+
+.featured_product p {
+    opacity: 0.75;
+}
+
+.featured_product img {
+    margin-bottom: 12px;
+}
+
+@media screen and (max-width: 769px) {
+    .featured_product {
+        text-align: center;
+    }
+}
