@@ -16,11 +16,21 @@
     background-color: var(--clr-black-900);
 }
 
+.outline {
+    background-color: transparent;
+    border: 1px solid var(--clr-black-900);
+}
+
 .beige,
 .black,
 .beige > a,
 .black > a {
     color: var(--clr-white-900);
+}
+
+.outline,
+.outline > a {
+    color: var(--clr-black-900);
 }
 
 .button:has(a) {

@@ -22,7 +22,7 @@ export default function Button({
         <button
             type={type}
             disabled={disabled}
-            className={`${styles.button} ${variant === 'solid' && styles[color]}`}
+            className={`${styles.button} ${variant === 'solid' && styles[color]} ${styles[variant]}`}
             {...props}
         >
 

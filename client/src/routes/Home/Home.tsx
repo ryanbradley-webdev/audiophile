@@ -3,6 +3,7 @@ import Button from '../../components/Button/Button'
 import Hero from '../../components/Hero/Hero'
 import Nav from '../../components/Nav/Nav'
 import ZX9 from './images/image-speaker-zx9.png'
+import ZX7 from './images/image-speaker-zx7.jpg'
 import Background from '/pattern-circles.svg'
 import styles from './Home.module.css'
 
@@ -58,6 +59,31 @@ export default function Home() {
 
                         <Link
                             to='/speakers/zx9'
+                        >
+                            SEE PRODUCT
+                        </Link>
+
+                    </Button>
+
+                </div>
+
+                <div
+                    className={styles.second_product}
+                    style={{
+                        backgroundImage: `url(${ZX7})`
+                    }}
+                >
+
+                    <h4>
+                        ZX7 SPEAKER
+                    </h4>
+
+                    <Button
+                        variant='outline'
+                    >
+
+                        <Link
+                            to='/speakers/zx7'
                         >
                             SEE PRODUCT
                         </Link>
