@@ -1,0 +1,16 @@
+.heading h6 {
+    color: var(--clr-beige-800);
+    font: var(--font-overline);
+    letter-spacing: var(--space-overline);
+}
+
+.heading h2 {
+    font: var(--font-product-head);
+    letter-spacing: var(--space-product-head);
+}
+
+.heading h5 {
+    font-size: 18px;
+    letter-spacing: 1.29px;
+    font-weight: bold;
+}

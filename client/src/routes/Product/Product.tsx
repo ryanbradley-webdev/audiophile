@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { SAMPLE_DATA } from '../../sample-data/data'
 import styles from './Product.module.css'
+import { formatCurrency } from '../../util/formatCurrency'
 
 export default function Product() {
     const { slug } = useParams()
@@ -16,12 +17,44 @@ export default function Product() {
             
             {
                 product ? (
-                    <img
-                        src={product.image.mobile}
-                        alt={product.name}
-                        width='100%'
-                        height='auto'
-                    />
+                    <>
+                    
+                        <div
+                            className={styles.heading}
+                        >
+
+                            <img
+                                src={product.image.mobile}
+                                alt={product.name}
+                                width='100%'
+                                height='auto'
+                            />
+
+                            <div>
+                                
+                                {product.isNew && (
+                                    <h6>
+                                        NEW PRODUCT
+                                    </h6>
+                                )}
+
+                                <h2>
+                                    {product.name.toUpperCase()}<br />{product.category.toUpperCase()}
+                                </h2>
+
+                                <p>
+                                    {product.description}
+                                </p>
+
+                                <h5>
+                                    {formatCurrency(product.price)}
+                                </h5>
+
+                            </div>
+
+                        </div>
+
+                    </>
                 ) : (
                     'Not Found'
                 )
