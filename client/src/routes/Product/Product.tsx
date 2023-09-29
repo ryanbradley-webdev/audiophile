@@ -1,10 +1,12 @@
-import { useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { SAMPLE_DATA } from '../../sample-data/data'
 import styles from './Product.module.css'
 import { formatCurrency } from '../../util/formatCurrency'
 
 export default function Product() {
     const { slug } = useParams()
+
+    const navigate = useNavigate()
 
     const product = SAMPLE_DATA.find(item => item.slug === slug)
 
@@ -14,6 +16,13 @@ export default function Product() {
         <section
             className={styles.section}
         >
+
+            <Link
+                to=''
+                onClick={() => navigate(-1)}
+            >
+                Go Back
+            </Link>
             
             {
                 product ? (

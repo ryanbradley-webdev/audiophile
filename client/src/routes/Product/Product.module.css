@@ -1,3 +1,16 @@
+.section {
+    padding-block: 16px;
+    padding-inline: 24px;
+}
+
+.section > a {
+    display: block;
+    margin-bottom: 24px;
+    color: inherit;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
 .heading h6 {
     color: var(--clr-beige-800);
     font: var(--font-overline);
