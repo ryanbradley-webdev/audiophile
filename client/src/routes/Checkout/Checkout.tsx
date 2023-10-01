@@ -1,3 +1,4 @@
+import BackLink from '../../components/BackLink/BackLink'
 import Button from '../../components/Button/Button'
 import Input from '../../components/Input/Input'
 import styles from './Checkout.module.css'
@@ -11,6 +12,8 @@ export default function Checkout() {
     <main
       className={styles.main}
     >
+
+      <BackLink />
       
       <form
         onSubmit={handleSubmit}

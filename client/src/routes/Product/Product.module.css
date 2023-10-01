@@ -3,14 +3,6 @@
     padding-inline: 24px;
 }
 
-.section > a {
-    display: block;
-    margin-bottom: 24px;
-    color: inherit;
-    font-weight: 500;
-    opacity: 0.5;
-}
-
 .page_grid {
     display: grid;
     row-gap: 88px;
