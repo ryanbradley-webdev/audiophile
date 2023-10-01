@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from '../Button/Button'
 import styles from './AddToCart.module.css'
+import QuantityCounter from '../QuantityCounter/QuantityCounter'
 
 export default function AddToCart() {
     const [quantity, setQuantity] = useState(1)
@@ -28,27 +29,11 @@ export default function AddToCart() {
             className={styles.container}
         >
 
-            <div
-                className={styles.quantity}
-            >
-
-                <button
-                    onClick={handleDecrementQuantity}
-                >
-                    -
-                </button>
-
-                <span>
-                    {quantity}
-                </span>
-
-                <button
-                    onClick={handleIncrementQuantity}
-                >
-                    +
-                </button>
-
-            </div>
+            <QuantityCounter
+                quantity={quantity}
+                increment={handleIncrementQuantity}
+                decrement={handleDecrementQuantity}
+            />
 
             <Button
                 variant='solid'
