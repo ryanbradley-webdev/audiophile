@@ -89,6 +89,43 @@ export default function Product() {
                                 }
 
                             </div>
+
+                            <div
+                                className={styles.contents}
+                            >
+
+                                <h3>
+                                    IN THE BOX
+                                </h3>
+
+                                <ul
+                                    className={styles.box_list}
+                                >
+
+                                    {
+                                        product.includes.map((item, idx) => (
+                                            <li
+                                                key={idx}
+                                                className={styles.box_item}
+                                            >
+                                                <span
+                                                    className={styles.quantity}
+                                                >
+                                                    {item.quantity}x
+                                                </span>
+                                                
+                                                <span
+                                                    className={styles.item}
+                                                >
+                                                    {item.item}
+                                                </span>
+                                            </li>
+                                        ))
+                                    }
+
+                                </ul>
+
+                            </div>
                             
                         </div>
 

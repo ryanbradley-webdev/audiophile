@@ -16,6 +16,11 @@
     row-gap: 88px;
 }
 
+.page_grid > div:nth-child(2) {
+    display: grid;
+    row-gap: 88px;
+}
+
 .heading {
     display: grid;
     row-gap: 32px;
@@ -53,4 +58,24 @@
 
 .features p {
     margin-block: 25px;
+}
+
+.box_list {
+    list-style: none;
+    margin-top: 24px;
+}
+
+.box_item {
+    display: grid;
+    grid-template-columns: 39px 1fr;
+    margin-top: 8px;
+}
+
+.quantity {
+    color: var(--clr-beige-800);
+    font-weight: bold;
+}
+
+.item {
+    opacity: 0.5;
 }
