@@ -11,6 +11,20 @@
     opacity: 0.5;
 }
 
+.heading {
+    display: grid;
+    row-gap: 32px;
+}
+
+.heading img {
+    border-radius: 8px;
+}
+
+.heading > div {
+    display: grid;
+    row-gap: 24px;
+}
+
 .heading h6 {
     color: var(--clr-beige-800);
     font: var(--font-overline);
@@ -26,4 +40,8 @@
     font-size: 18px;
     letter-spacing: 1.29px;
     font-weight: bold;
+}
+
+.heading p {
+    opacity: 0.5;
 }
