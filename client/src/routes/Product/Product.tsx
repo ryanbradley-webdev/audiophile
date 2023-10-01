@@ -4,6 +4,7 @@ import styles from './Product.module.css'
 import { formatCurrency } from '../../util/formatCurrency'
 import AddToCart from '../../components/AddToCart/AddToCart'
 import ImgGrid from '../../components/ImgGrid/ImgGrid'
+import Recommendations from '../../components/Recommendations/Recommendations'
 
 export default function Product() {
     const { slug } = useParams()
@@ -132,6 +133,11 @@ export default function Product() {
 
                         <ImgGrid
                             images={product.gallery.mobile}
+                        />
+
+                        <Recommendations
+                            id={product.id}
+                            category={product.category}
                         />
 
                     </section>
