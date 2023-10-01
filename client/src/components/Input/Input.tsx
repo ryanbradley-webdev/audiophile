@@ -2,13 +2,13 @@ import { useState } from 'react'
 import styles from './Input.module.css'
 
 type InputProps = {
+    label: string
     value: string
     onChange: (arg: string) => void
 } & (TextProps | RadioProps)
 
 type TextProps = {
-    type: 'text' | 'email' | 'number'
-    label: string
+    type: 'text' | 'email' | 'number' | 'tel'
     htmlFor: string
     placeholder: string
 }
@@ -19,7 +19,7 @@ type RadioProps = {
 }
 
 export default function Input(props: InputProps) {
-    const { value, onChange, type } = props
+    const { value, onChange, type, label } = props
     
     const [valid, setValid] = useState(true)
 
@@ -50,21 +50,31 @@ export default function Input(props: InputProps) {
 
         </label>
     ) : (
-        props.options.map(option => (
-            <label>
+        <div>
 
-                <input
-                    type="radio"
-                    value={option}
-                    checked={option === value}
-                />
+            <span>
+                {label}
+            </span>
 
-                <span>
-                    {option}
-                </span>
+            {props.options.map(option => (
+                <label
+                    className={styles.radio_label}
+                >
+    
+                    <input
+                        type="radio"
+                        value={option}
+                        checked={option === value}
+                    />
+    
+                    <span>
+                        {option}
+                    </span>
+    
+                </label>
+            ))}
 
-            </label>
-        ))
+        </div>
     )
 
     return (

@@ -1,0 +1,20 @@
+.fieldset {
+    display: grid;
+    row-gap: 24px;
+    border: none;
+    margin-bottom: 32px;
+}
+
+.fieldset h4 {
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 0.93px;
+    color: var(--clr-beige-800);
+}
+
+.fieldset span {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: -0.21px;
+    font-weight: bold;
+}

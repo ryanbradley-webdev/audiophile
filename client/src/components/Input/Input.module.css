@@ -1,0 +1,9 @@
+.label {
+    display: grid;
+    row-gap: 9px;
+}
+
+.radio_label span {
+    font-size: 14px;
+    letter-spacing: -0.25px;
+}
