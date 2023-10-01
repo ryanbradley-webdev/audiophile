@@ -25,7 +25,11 @@ export default function Header() {
                 onClick={handleToggleMenu}
             />
 
-            {menuVisible && <Nav />}
+            {menuVisible && (
+                <Nav
+                    toggleMenu={handleToggleMenu}
+                />
+            )}
 
             <Logo />
 

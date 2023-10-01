@@ -5,7 +5,11 @@ import Speakers from './images/image-category-thumbnail-speakers.png'
 import Earphones from './images/image-category-thumbnail-earphones.png'
 import styles from './Nav.module.css'
 
-export default function Nav() {
+export default function Nav({
+    toggleMenu
+}: {
+    toggleMenu: () => void
+}) {
     const items: Path[] = [
         'headphones',
         'speakers',
@@ -19,7 +23,11 @@ export default function Nav() {
             
             {
                 items.map((item, idx) => (
-                    <NavItem key={idx} path={item} />
+                    <NavItem
+                        key={idx}
+                        path={item}
+                        toggleMenu={toggleMenu}
+                    />
                 ))
             }
 
@@ -28,9 +36,11 @@ export default function Nav() {
 }
 
 function NavItem({
-    path
+    path,
+    toggleMenu
 }: {
     path: 'headphones' | 'speakers' | 'earphones'
+    toggleMenu: () => void
 }) {
     const src =
         path === 'headphones' ? Headphones
@@ -41,6 +51,7 @@ function NavItem({
         <Link
             to={'/' + path}
             className={styles.link}
+            onClick={toggleMenu}
         >
 
             <img
