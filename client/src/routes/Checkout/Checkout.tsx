@@ -1,5 +1,6 @@
 import BackLink from '../../components/BackLink/BackLink'
 import Button from '../../components/Button/Button'
+import CheckoutCosts from '../../components/CheckoutCosts/CheckoutCosts'
 import Input from '../../components/Input/Input'
 import styles from './Checkout.module.css'
 
@@ -20,13 +21,13 @@ export default function Checkout() {
         className={styles.form}
       >
 
-        <h1>
-          CHECKOUT
-        </h1>
-
         <div
           className={styles.fieldset_container}
         >
+
+          <h1>
+            CHECKOUT
+          </h1>
 
           <fieldset
             className={styles.fieldset}
@@ -149,13 +150,24 @@ export default function Checkout() {
 
         </div>
 
-        <div>
+        <div
+          className={styles.summary}
+        >
+
+          <h6>
+            SUMMARY
+          </h6>
+
+          <CheckoutCosts
+            total={5396}
+            vat={1079}
+          />
 
           <Button
             variant='solid'
             color='beige'
           >
-            CHECKOUT
+            CONTINUE & PAY
           </Button>
 
         </div>

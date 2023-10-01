@@ -5,13 +5,28 @@
 }
 
 .form {
-    padding: 24px;
+    display: grid;
+    row-gap: 32px;
+}
+
+.form h1 {
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.form button {
+    width: 100%;
+}
+
+.fieldset_container,
+.summary {
+    padding-inline: 24px;
+    padding-block: 32px;
 }
 
 .fieldset_container {
     display: grid;
     row-gap: 32px;
-    margin-top: 32px;
 }
 
 .fieldset {
@@ -32,4 +47,10 @@
     line-height: 12px;
     letter-spacing: -0.21px;
     font-weight: bold;
+}
+
+.summary {
+    display: grid;
+    row-gap: 32px;
+    padding-block: 32px;
 }
