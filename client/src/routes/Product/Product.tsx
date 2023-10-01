@@ -27,7 +27,9 @@ export default function Product() {
             
             {
                 product ? (
-                    <>
+                    <section
+                        className={styles.page_grid}
+                    >
                     
                         <div
                             className={styles.heading}
@@ -66,7 +68,31 @@ export default function Product() {
 
                         </div>
 
-                    </>
+                        <div>
+
+                            <div
+                                className={styles.features}
+                            >
+
+                                <h3>
+                                    FEATURES
+                                </h3>
+
+                                {
+                                    product.features.split('\n\n').map((paragraph, idx) => (
+                                        <p
+                                            key={idx}
+                                        >
+                                            {paragraph}
+                                        </p>
+                                    ))
+                                }
+
+                            </div>
+                            
+                        </div>
+
+                    </section>
                 ) : (
                     'Not Found'
                 )

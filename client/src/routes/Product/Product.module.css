@@ -11,6 +11,11 @@
     opacity: 0.5;
 }
 
+.page_grid {
+    display: grid;
+    row-gap: 88px;
+}
+
 .heading {
     display: grid;
     row-gap: 32px;
@@ -44,4 +49,8 @@
 
 .heading p {
     opacity: 0.5;
+}
+
+.features p {
+    margin-block: 25px;
 }
