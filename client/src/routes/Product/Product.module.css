@@ -14,6 +14,7 @@
 .page_grid {
     display: grid;
     row-gap: 88px;
+    margin-bottom: 64px;
 }
 
 .page_grid > div:nth-child(2) {

@@ -3,6 +3,7 @@ import { SAMPLE_DATA } from '../../sample-data/data'
 import styles from './Product.module.css'
 import { formatCurrency } from '../../util/formatCurrency'
 import AddToCart from '../../components/AddToCart/AddToCart'
+import ImgGrid from '../../components/ImgGrid/ImgGrid'
 
 export default function Product() {
     const { slug } = useParams()
@@ -128,6 +129,10 @@ export default function Product() {
                             </div>
                             
                         </div>
+
+                        <ImgGrid
+                            images={product.gallery.mobile}
+                        />
 
                     </section>
                 ) : (

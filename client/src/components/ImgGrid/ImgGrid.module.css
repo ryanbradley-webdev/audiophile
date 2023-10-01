@@ -1,0 +1,8 @@
+.grid {
+    display: grid;
+    row-gap: 20px;
+}
+
+.grid img {
+    border-radius: 8px;
+}
