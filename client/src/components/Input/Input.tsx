@@ -46,11 +46,14 @@ export default function Input(props: InputProps) {
                 value={value}
                 onChange={handleChange}
                 placeholder={props.placeholder}
+                className={styles.input}
             />
 
         </label>
     ) : (
-        <div>
+        <div
+            className={styles.radio_container}
+        >
 
             <span>
                 {label}
@@ -64,7 +67,7 @@ export default function Input(props: InputProps) {
                     <input
                         type="radio"
                         value={option}
-                        checked={option === value}
+                        checked={option === 'e-Money'}
                     />
     
                     <span>

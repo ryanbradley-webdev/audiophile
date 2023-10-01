@@ -1,8 +1,23 @@
+.main {
+    padding-inline: 24px;
+    padding-top: 106px;
+    padding-bottom: 16px;
+}
+
+.form {
+    padding: 24px;
+}
+
+.fieldset_container {
+    display: grid;
+    row-gap: 32px;
+    margin-top: 32px;
+}
+
 .fieldset {
     display: grid;
     row-gap: 24px;
     border: none;
-    margin-bottom: 32px;
 }
 
 .fieldset h4 {

@@ -14,13 +14,16 @@ export default function Checkout() {
       
       <form
         onSubmit={handleSubmit}
+        className={styles.form}
       >
 
         <h1>
           CHECKOUT
         </h1>
 
-        <div>
+        <div
+          className={styles.fieldset_container}
+        >
 
           <fieldset
             className={styles.fieldset}
