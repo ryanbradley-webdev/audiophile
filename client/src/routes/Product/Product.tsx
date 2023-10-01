@@ -2,6 +2,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { SAMPLE_DATA } from '../../sample-data/data'
 import styles from './Product.module.css'
 import { formatCurrency } from '../../util/formatCurrency'
+import AddToCart from '../../components/AddToCart/AddToCart'
 
 export default function Product() {
     const { slug } = useParams()
@@ -58,6 +59,8 @@ export default function Product() {
                                 <h5>
                                     {formatCurrency(product.price)}
                                 </h5>
+
+                                <AddToCart />
 
                             </div>
 

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    gap: 16px;
+    margin-top: 5px;
+}
+
+.quantity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 120px;
+    height: 100%;
+    background-color: var(--clr-white-700);
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.quantity span {
+    place-self: center;
+}
+
+.quantity button {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    opacity: 0.5;
+}
