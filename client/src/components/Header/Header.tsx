@@ -6,8 +6,7 @@ import Nav from '../Nav/Nav'
 import styles from './Header.module.css'
 import useHeaderBackground from '../../hooks/useHeaderBackground'
 import Modal from '../Modal/Modal'
-import Button from '../Button/Button'
-import { Link } from 'react-router-dom'
+import Cart from '../Cart/Cart'
 
 export default function Header() {
     const [menuVisible, setMenuVisible] = useState(false)
@@ -50,43 +49,9 @@ export default function Header() {
                     toggleModal={handleToggleCart}
                 >
 
-                    <div>
-
-                        <h6>
-                            CART (3)
-                        </h6>
-
-                        <button>
-                            Remove all
-                        </button>
-
-                    </div>
-
-                    <div>
-
-                        <p>
-                            TOTAL
-                        </p>
-
-                        <span>
-                            $ 5,396
-                        </span>
-
-                    </div>
-                    
-                    <Button
-                        variant='solid'
-                        color='beige'
-                    >
-
-                        <Link
-                            to='/checkout'
-                            onClick={handleToggleCart}
-                        >
-                            CHECKOUT
-                        </Link>
-
-                    </Button>
+                    <Cart
+                        toggleCart={handleToggleCart}
+                    />
 
                 </Modal>
             )}
