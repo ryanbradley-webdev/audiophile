@@ -27,6 +27,10 @@ export default function Input(props: InputProps) {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValid(e.target.value !== '')
 
+        if (type === 'email') {
+            setValidEmail(e.target.value.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z0-9-]{2}/) !== null)
+        }
+
         onChange(e.target.value)
     }
 
