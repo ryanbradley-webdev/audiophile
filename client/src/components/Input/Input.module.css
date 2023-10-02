@@ -1,6 +1,27 @@
 .label {
+    position: relative;
     display: grid;
     row-gap: 9px;
+}
+
+.label[aria-invalid='true'] span,
+.label[aria-invalid='true']::after {
+    color: var(--clr-red-900);
+}
+
+.label[aria-invalid='true']::after {
+    content: 'Can\'t be empty';
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: -0.21px;
+    line-height: 12px;
+}
+
+.label[data-invalid-email='true']::after {
+    content: 'Wrong format';
 }
 
 .radio_container {
@@ -25,6 +46,16 @@
 .input::placeholder {
     color: var(--clr-black-900);
     opacity: 0.4;
+}
+
+.input:is(:hover, :focus) {
+    outline: none;
+    border: 1px solid var(--clr-beige-800);
+}
+
+.label[aria-invalid='true'] .input {
+    outline: none;
+    border: 1px solid var(--clr-red-900);
 }
 
 .radio_label {

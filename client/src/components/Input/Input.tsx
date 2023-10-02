@@ -22,6 +22,7 @@ export default function Input(props: InputProps) {
     const { value, onChange, type, label } = props
     
     const [valid, setValid] = useState(true)
+    const [validEmail, setValidEmail] = useState(true)
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setValid(e.target.value !== '')
@@ -38,6 +39,7 @@ export default function Input(props: InputProps) {
             htmlFor={props.htmlFor}
             className={styles.label}
             aria-invalid={!valid}
+            data-invalid-email={type === 'email' && !validEmail}
         >
 
             <span>

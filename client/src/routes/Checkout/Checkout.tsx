@@ -25,6 +25,8 @@ export default function Checkout() {
       type === 'updatePin' && value.length > 4
     ) return
 
+    // TODO add logic to format phone number input
+
     dispatch({ type, payload: value })
   }
 
