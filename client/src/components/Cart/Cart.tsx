@@ -14,7 +14,9 @@ export default function Cart({
     return (
         <>
 
-            <div>
+            <div
+                className={styles.header}
+            >
 
                 <h6>
                     CART (3)
@@ -31,7 +33,9 @@ export default function Cart({
             >
 
                 {SAMPLE_CART.map(item => (
-                    <div>
+                    <div
+                        className={styles.item}
+                    >
 
                         <img
                             src={item.preview_img}
@@ -40,7 +44,9 @@ export default function Cart({
                             height={64}
                         />
 
-                        <div>
+                        <div
+                            className={styles.item_info}
+                        >
 
                             <strong>
                                 {item.name}
@@ -68,7 +74,9 @@ export default function Cart({
 
             </div>
 
-            <div>
+            <div
+                className={styles.total}
+            >
 
                 <p>
                     TOTAL
