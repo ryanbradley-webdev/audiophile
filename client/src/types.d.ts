@@ -22,3 +22,14 @@ type Product = {
         mobile: string[]
     }
 }
+
+type CartItem = Product & {
+    quantity: number
+}
+
+type CartContext = {
+    cart: CartItem[]
+    incrementQuantity: (id: string) => void
+    decrementQuantity: (id: string) => void
+    removeItemFromCart: (id: string) => void
+}
