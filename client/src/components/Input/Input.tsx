@@ -29,6 +29,10 @@ export default function Input(props: InputProps) {
         onChange(e.target.value)
     }
 
+    const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.checked) onChange(e.target.value)
+    }
+
     const content = type !== 'radio' ? (
         <label
             htmlFor={props.htmlFor}
@@ -59,15 +63,17 @@ export default function Input(props: InputProps) {
                 {label}
             </span>
 
-            {props.options.map(option => (
+            {props.options.map((option, idx) => (
                 <label
                     className={styles.radio_label}
+                    key={idx}
                 >
     
                     <input
                         type="radio"
                         value={option}
-                        checked={option === 'e-Money'}
+                        checked={option === value}
+                        onChange={handleRadioChange}
                     />
     
                     <span>

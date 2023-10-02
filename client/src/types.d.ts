@@ -33,3 +33,21 @@ type CartContext = {
     decrementQuantity: (id: string) => void
     emptyCart: () => void
 }
+
+type CheckoutData = {
+    name: string
+    email: string
+    phone: string
+    address: string
+    zip: string
+    city: string
+    country: string
+    payment_method: 'e-Money' | 'Cash on Delivery'
+    e_money_number: string
+    pin: string
+}
+
+type CheckoutAction = {
+    type: string
+    payload: string
+}

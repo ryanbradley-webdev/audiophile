@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useReducer } from 'react'
 import BackLink from '../../components/BackLink/BackLink'
 import Button from '../../components/Button/Button'
 import CheckoutCosts from '../../components/CheckoutCosts/CheckoutCosts'
@@ -7,11 +7,14 @@ import { CartContext } from '../../contexts/CartContext'
 import styles from './Checkout.module.css'
 import { calculateCartTotal } from '../../util/calculateCartTotal'
 import CartItem from '../../components/CartItem/CartItem'
+import { checkoutReducer, initialCheckout } from './util/checkoutReducer'
 
 export default function Checkout() {
   const {
     cart
   } = useContext(CartContext)
+
+  const [checkoutData, dispatch] = useReducer(checkoutReducer, initialCheckout)
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
@@ -49,27 +52,27 @@ export default function Checkout() {
               type='text'
               label='Name'
               htmlFor='name'
-              value=''
+              value={checkoutData.name}
               placeholder='Alexei Ward'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updateName', payload: arg })}
             />
 
             <Input
               type='email'
               label='Email Address'
               htmlFor='email'
-              value=''
+              value={checkoutData.email}
               placeholder='alexei@mail.com'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updateEmail', payload: arg })}
             />
 
             <Input
               type='tel'
               label='Phone Number'
               htmlFor='phone'
-              value=''
+              value={checkoutData.phone}
               placeholder='+1 202-555-0136'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updatePhone', payload: arg })}
             />
 
           </fieldset>
@@ -86,36 +89,36 @@ export default function Checkout() {
               type='text'
               label='Your Address'
               htmlFor='address'
-              value=''
+              value={checkoutData.address}
               placeholder='1137 Williams Avenue'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updateAddress', payload: arg })}
             />
 
             <Input
               type='number'
               label='ZIP Code'
               htmlFor='zip'
-              value=''
+              value={checkoutData.zip}
               placeholder='10001'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updateZip', payload: arg })}
             />
 
             <Input
               type='text'
               label='City'
               htmlFor='city'
-              value=''
+              value={checkoutData.city}
               placeholder='New York'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updateCity', payload: arg })}
             />
 
             <Input
               type='text'
               label='Country'
               htmlFor='country'
-              value=''
+              value={checkoutData.country}
               placeholder='United States'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updateCountry', payload: arg })}
             />
 
           </fieldset>
@@ -131,27 +134,27 @@ export default function Checkout() {
             <Input
               type='radio'
               label='Payment Method'
-              value=''
+              value={checkoutData.payment_method}
               options={['e-Money', 'Cash on Delivery']}
-              onChange={arg => console.log(arg)}
+              onChange={arg => dispatch({ type: 'updatePaymentMethod', payload: arg })}
             />
             
             <Input
               type='number'
               label='e-Money Number'
               htmlFor='emoney'
-              value=''
+              value={checkoutData.e_money_number}
               placeholder='238521993'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updateEMoneyNumber', payload: arg })}
             />
 
             <Input
               type='number'
               label='e-Money PIN'
               htmlFor='pin'
-              value=''
+              value={checkoutData.pin}
               placeholder='6891'
-              onChange={(arg) => console.log(arg)}
+              onChange={(arg) => dispatch({ type: 'updatePin', payload: arg })}
             />
 
           </fieldset>
