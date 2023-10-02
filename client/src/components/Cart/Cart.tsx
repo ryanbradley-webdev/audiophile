@@ -5,6 +5,7 @@ import Button from '../Button/Button'
 import QuantityCounter from '../QuantityCounter/QuantityCounter'
 import styles from './Cart.module.css'
 import { CartContext } from '../../contexts/CartContext'
+import { calculateCartTotal } from '../../util/calculateCartTotal'
 
 export default function Cart({
     toggleCart
@@ -14,7 +15,8 @@ export default function Cart({
     const {
       cart,
       incrementQuantity,
-      decrementQuantity
+      decrementQuantity,
+      emptyCart
     } = useContext(CartContext)
 
     return (
@@ -25,10 +27,12 @@ export default function Cart({
             >
 
                 <h6>
-                    CART (3)
+                    CART ({cart.length})
                 </h6>
 
-                <button>
+                <button
+                  onClick={emptyCart}
+                >
                     Remove all
                 </button>
 
@@ -89,7 +93,7 @@ export default function Cart({
                 </p>
 
                 <span>
-                    $ 5,396
+                    {calculateCartTotal(cart)}
                 </span>
 
             </div>

@@ -43,11 +43,15 @@ export default function CartProvider({
         setCart(prev => prev.filter(item => item.id !== id))
     }
 
+    const emptyCart = () => {
+        setCart([])
+    }
+
     const value = {
         cart,
         incrementQuantity,
         decrementQuantity,
-        removeItemFromCart
+        emptyCart
     }
 
     return (

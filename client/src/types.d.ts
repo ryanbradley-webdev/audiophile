@@ -31,5 +31,5 @@ type CartContext = {
     cart: CartItem[]
     incrementQuantity: (id: string) => void
     decrementQuantity: (id: string) => void
-    removeItemFromCart: (id: string) => void
+    emptyCart: () => void
 }
