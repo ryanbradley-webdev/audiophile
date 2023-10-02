@@ -1,0 +1,20 @@
+.modal_container {
+    position: fixed;
+    inset: 0;
+    top: 90px;
+    padding-inline: 24px;
+    padding-block: 24px;
+    background-color: var(--clr-black-100);
+}
+
+.modal {
+    padding-inline: 28px;
+    padding-block: 32px;
+    width: 100%;
+    background-color: var(--clr-white-900);
+    border-radius: 8px;
+}
+
+.modal > button {
+    width: 100%;
+}
