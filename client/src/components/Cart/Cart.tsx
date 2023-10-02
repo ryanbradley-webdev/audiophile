@@ -2,10 +2,10 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { formatCurrency } from '../../util/formatCurrency'
 import Button from '../Button/Button'
-import QuantityCounter from '../QuantityCounter/QuantityCounter'
 import styles from './Cart.module.css'
 import { CartContext } from '../../contexts/CartContext'
 import { calculateCartTotal } from '../../util/calculateCartTotal'
+import CartItem from '../CartItem/CartItem'
 
 export default function Cart({
     toggleCart
@@ -43,43 +43,13 @@ export default function Cart({
             >
 
                 {cart.map(item => (
-                    <div
-                        className={styles.item}
-                    >
-
-                        <img
-                            src={item.preview_img}
-                            alt={item.name}
-                            width={64}
-                            height={64}
-                        />
-
-                        <div
-                            className={styles.item_info}
-                        >
-
-                            <strong>
-                                {item.name}
-                            </strong>
-
-                            <strong
-                                style={{
-                                    fontSize: 14,
-                                    opacity: 0.5
-                                }}
-                            >
-                                {formatCurrency(item.price)}
-                            </strong>
-
-                        </div>
-
-                        <QuantityCounter
-                            quantity={item.quantity}
-                            increment={() => incrementQuantity(item.id)}
-                            decrement={() => decrementQuantity(item.id)}
-                        />
-
-                    </div>
+                    <CartItem
+                        key={item.id}
+                        item={item}
+                        updateQuantity
+                        incrementQuantity={() => incrementQuantity(item.id)}
+                        decrementQuantity={() => decrementQuantity(item.id)}
+                    />
                 ))}
 
             </div>

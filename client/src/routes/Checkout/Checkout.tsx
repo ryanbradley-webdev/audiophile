@@ -6,6 +6,7 @@ import Input from '../../components/Input/Input'
 import { CartContext } from '../../contexts/CartContext'
 import styles from './Checkout.module.css'
 import { calculateCartTotal } from '../../util/calculateCartTotal'
+import CartItem from '../../components/CartItem/CartItem'
 
 export default function Checkout() {
   const {
@@ -164,6 +165,20 @@ export default function Checkout() {
           <h6>
             SUMMARY
           </h6>
+
+          <div>
+
+            {
+              cart.map(item => (
+                <CartItem
+                  key={item.id}
+                  item={item}
+                  updateQuantity={undefined}
+                />
+              ))
+            }
+
+          </div>
 
           <CheckoutCosts
             total={calculateCartTotal(cart)}

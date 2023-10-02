@@ -1,5 +1,4 @@
 .header,
-.item,
 .total {
     display: flex;
     justify-content: space-between;
@@ -16,28 +15,6 @@
 
 .cart_items {
     margin-block: 32px;
-}
-
-.item {
-    gap: 16px;
-    margin-bottom: 24px;
-}
-
-.item img {
-    border-radius: 8px;
-}
-
-.item_info {
-    flex-grow: 1;
-}
-
-.item_info > * {
-    display: block;
-}
-
-.item > div:last-child {
-    height: 32px;
-    width: 96px;
 }
 
 .total {

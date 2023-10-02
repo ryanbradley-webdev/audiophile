@@ -1,0 +1,27 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.item img {
+    border-radius: 8px;
+}
+
+.item_info {
+    flex-grow: 1;
+}
+
+.item_info > * {
+    display: block;
+}
+
+.item > div:last-child {
+    height: 32px;
+    width: 96px;
+}
