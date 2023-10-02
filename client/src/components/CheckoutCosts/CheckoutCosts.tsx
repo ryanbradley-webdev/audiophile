@@ -8,6 +8,8 @@ export default function CheckoutCosts({
     total: number
     vat: number
 }) {
+    const shipping = total ? 50 : 0
+
     return (
         <div
             className={styles.price_container}
@@ -32,7 +34,7 @@ export default function CheckoutCosts({
                 </p>
 
                 <span>
-                    $ 50
+                    $ {shipping}
                 </span>
 
             </div>
@@ -56,7 +58,7 @@ export default function CheckoutCosts({
                 </p>
 
                 <span>
-                    {formatCurrency(total + 50)}
+                    {formatCurrency(total + shipping)}
                 </span>
 
             </div>

@@ -1,10 +1,17 @@
+import { useContext } from 'react'
 import BackLink from '../../components/BackLink/BackLink'
 import Button from '../../components/Button/Button'
 import CheckoutCosts from '../../components/CheckoutCosts/CheckoutCosts'
 import Input from '../../components/Input/Input'
+import { CartContext } from '../../contexts/CartContext'
 import styles from './Checkout.module.css'
+import { calculateCartTotal } from '../../util/calculateCartTotal'
 
 export default function Checkout() {
+  const {
+    cart
+  } = useContext(CartContext)
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
   }
@@ -159,8 +166,8 @@ export default function Checkout() {
           </h6>
 
           <CheckoutCosts
-            total={5396}
-            vat={1079}
+            total={calculateCartTotal(cart)}
+            vat={Math.floor(calculateCartTotal(cart) * 0.2)}
           />
 
           <Button

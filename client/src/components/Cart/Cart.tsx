@@ -93,7 +93,7 @@ export default function Cart({
                 </p>
 
                 <span>
-                    {calculateCartTotal(cart)}
+                    {formatCurrency(calculateCartTotal(cart))}
                 </span>
 
             </div>
