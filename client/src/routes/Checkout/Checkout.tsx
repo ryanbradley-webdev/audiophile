@@ -16,6 +16,18 @@ export default function Checkout() {
 
   const [checkoutData, dispatch] = useReducer(checkoutReducer, initialCheckout)
 
+  const handleNumberChange = (value: string, type: 'updateZip' | 'updatePin' | 'updateEMoneyNumber') => {
+    if (value && (value.match(/[0-9]/g)?.length !== value.length)) return
+
+    if (
+      type === 'updateZip' && value.length > 5 ||
+      type === 'updateEMoneyNumber' && value.length > 9 ||
+      type === 'updatePin' && value.length > 4
+    ) return
+
+    dispatch({ type, payload: value })
+  }
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
   }
@@ -95,12 +107,12 @@ export default function Checkout() {
             />
 
             <Input
-              type='number'
+              type='text'
               label='ZIP Code'
               htmlFor='zip'
               value={checkoutData.zip}
               placeholder='10001'
-              onChange={(arg) => dispatch({ type: 'updateZip', payload: arg })}
+              onChange={value => handleNumberChange(value, 'updateZip')}
             />
 
             <Input
@@ -139,23 +151,29 @@ export default function Checkout() {
               onChange={arg => dispatch({ type: 'updatePaymentMethod', payload: arg })}
             />
             
-            <Input
-              type='number'
-              label='e-Money Number'
-              htmlFor='emoney'
-              value={checkoutData.e_money_number}
-              placeholder='238521993'
-              onChange={(arg) => dispatch({ type: 'updateEMoneyNumber', payload: arg })}
-            />
+            {checkoutData.payment_method === 'e-Money' && (
+              <>
+              
+                <Input
+                  type='text'
+                  label='e-Money Number'
+                  htmlFor='emoney'
+                  value={checkoutData.e_money_number}
+                  placeholder='238521993'
+                  onChange={value => handleNumberChange(value, 'updateEMoneyNumber')}
+                />
 
-            <Input
-              type='number'
-              label='e-Money PIN'
-              htmlFor='pin'
-              value={checkoutData.pin}
-              placeholder='6891'
-              onChange={(arg) => dispatch({ type: 'updatePin', payload: arg })}
-            />
+                <Input
+                  type='text'
+                  label='e-Money PIN'
+                  htmlFor='pin'
+                  value={checkoutData.pin}
+                  placeholder='6891'
+                  onChange={value => handleNumberChange(value, 'updatePin')}
+                />
+              
+              </>
+            )}
 
           </fieldset>
 

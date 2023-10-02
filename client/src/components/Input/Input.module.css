@@ -33,6 +33,7 @@
     align-items: center;
     gap: 16px;
     padding-inline: 16px;
+    cursor: pointer;
 }
 
 .radio_label:has(input:checked) {
