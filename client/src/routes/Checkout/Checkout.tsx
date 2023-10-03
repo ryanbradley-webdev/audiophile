@@ -8,6 +8,7 @@ import styles from './Checkout.module.css'
 import { calculateCartTotal } from '../../util/calculateCartTotal'
 import CartItem from '../../components/CartItem/CartItem'
 import { checkoutReducer, initialCheckout } from './util/checkoutReducer'
+import CashOnDeliveryIcon from '../../assets/CashOnDeliveryIcon'
 
 export default function Checkout() {
   const {
@@ -153,7 +154,7 @@ export default function Checkout() {
               onChange={arg => dispatch({ type: 'updatePaymentMethod', payload: arg })}
             />
             
-            {checkoutData.payment_method === 'e-Money' && (
+            {checkoutData.payment_method === 'e-Money' ? (
               <>
               
                 <Input
@@ -175,6 +176,18 @@ export default function Checkout() {
                 />
               
               </>
+            ) : (
+              <div
+                className={styles.cash_option}
+              >
+
+                <CashOnDeliveryIcon />
+
+                <p>
+                  The 'Cash on Delivery' option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.
+                </p>
+
+              </div>
             )}
 
           </fieldset>

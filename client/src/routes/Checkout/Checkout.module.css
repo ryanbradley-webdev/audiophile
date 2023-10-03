@@ -49,6 +49,24 @@
     font-weight: bold;
 }
 
+.cash_option {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 6px;
+}
+
+.cash_option > svg {
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 480px) {
+    .cash_option {
+        flex-direction: column;
+        margin-top: 24px;
+    }
+}
+
 .summary {
     display: grid;
     row-gap: 32px;
