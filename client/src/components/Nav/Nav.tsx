@@ -8,7 +8,7 @@ import styles from './Nav.module.css'
 export default function Nav({
     toggleMenu
 }: {
-    toggleMenu: () => void
+    toggleMenu?: () => void
 }) {
     const items: Path[] = [
         'headphones',
@@ -40,7 +40,7 @@ function NavItem({
     toggleMenu
 }: {
     path: 'headphones' | 'speakers' | 'earphones'
-    toggleMenu: () => void
+    toggleMenu?: () => void
 }) {
     const src =
         path === 'headphones' ? Headphones
