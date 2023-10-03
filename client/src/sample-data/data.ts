@@ -354,7 +354,7 @@ export const SAMPLE_DATA: Product[] = [
       mobile: ZX9ProductMobile
     },
     category: "speakers",
-    preview_img: 'zx9-category-preview.jpg',
+    preview_img: '/zx9-category-preview.jpg',
     isNew: true,
     price: 4500,
     description: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",

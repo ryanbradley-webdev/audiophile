@@ -1,9 +1,18 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import Button from '../Button/Button'
 import styles from './AddToCart.module.css'
 import QuantityCounter from '../QuantityCounter/QuantityCounter'
+import { CartContext } from '../../contexts/CartContext'
 
-export default function AddToCart() {
+export default function AddToCart({
+    product
+}: {
+    product: Product
+}) {
+    const {
+        addItemToCart
+    } = useContext(CartContext)
+
     const [quantity, setQuantity] = useState(1)
 
     const handleIncrementQuantity = () => {
@@ -21,7 +30,12 @@ export default function AddToCart() {
     }
 
     const handleAddToCart = () => {
-        // TODO add logic for adding product to cart
+        const newCartItem = {
+            ...product,
+            quantity
+        }
+
+        addItemToCart(newCartItem)
     }
 
     return (

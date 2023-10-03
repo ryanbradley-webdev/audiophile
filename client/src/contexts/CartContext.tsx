@@ -43,6 +43,13 @@ export default function CartProvider({
         setCart(prev => prev.filter(item => item.id !== id))
     }
 
+    const addItemToCart = (newProduct: CartItem) => {
+      setCart(prev => ([
+        ...prev,
+        newProduct
+      ]))
+    }
+
     const emptyCart = () => {
         setCart([])
     }
@@ -51,6 +58,7 @@ export default function CartProvider({
         cart,
         incrementQuantity,
         decrementQuantity,
+        addItemToCart,
         emptyCart
     }
 

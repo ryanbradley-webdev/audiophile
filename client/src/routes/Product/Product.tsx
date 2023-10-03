@@ -56,7 +56,9 @@ export default function Product() {
                                     {formatCurrency(product.price)}
                                 </h5>
 
-                                <AddToCart />
+                                <AddToCart
+                                    product={product}
+                                />
 
                             </div>
 
