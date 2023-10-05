@@ -1,4 +1,4 @@
-import { useContext, useReducer } from 'react'
+import { useContext, useReducer, useState } from 'react'
 import BackLink from '../../components/BackLink/BackLink'
 import Button from '../../components/Button/Button'
 import CheckoutCosts from '../../components/CheckoutCosts/CheckoutCosts'
@@ -9,6 +9,9 @@ import { calculateCartTotal } from '../../util/calculateCartTotal'
 import CartItem from '../../components/CartItem/CartItem'
 import { checkoutReducer, initialCheckout } from './util/checkoutReducer'
 import CashOnDeliveryIcon from '../../assets/CashOnDeliveryIcon'
+import Modal from '../../components/Modal/Modal'
+import CheckIcon from '../../assets/CheckIcon'
+import { formatCurrency } from '../../util/formatCurrency'
 
 export default function Checkout() {
   const {
@@ -16,6 +19,9 @@ export default function Checkout() {
   } = useContext(CartContext)
 
   const [checkoutData, dispatch] = useReducer(checkoutReducer, initialCheckout)
+
+  const [submitting, setSubmitting] = useState(false)
+  const [success, setSuccess] = useState(true)
 
   const handleNumberChange = (value: string, type: 'updateZip' | 'updatePin' | 'updateEMoneyNumber') => {
     if (value && (value.match(/[0-9]/g)?.length !== value.length)) return
@@ -29,6 +35,10 @@ export default function Checkout() {
     // TODO add logic to format phone number input
 
     dispatch({ type, payload: value })
+  }
+
+  const handleNavigateHome = () => {
+    setSuccess(false)
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -231,6 +241,60 @@ export default function Checkout() {
         </div>
 
       </form>
+
+      {success && (
+        <Modal
+          toggleModal={handleNavigateHome}
+        >
+
+          <CheckIcon />
+
+          <h3>
+            THANK YOU FOR YOUR ORDER
+          </h3>
+          
+          <p>
+            You will receive an email confirmation shortly.
+          </p>
+
+          <div>
+
+            <CartItem
+              item={cart[0]}
+            />
+
+            {cart.length > 0 && (
+              <p>
+                and {cart.length - 1} other item{cart.length - 1 !== 1 && 's'}
+              </p>
+            )}
+
+          <div>
+
+            <p>
+              GRAND TOTAL
+            </p>
+
+            <strong>
+              {formatCurrency(calculateCartTotal(cart))}
+            </strong>
+
+          </div>
+
+          </div>
+
+          <Button
+            variant='solid'
+            color='beige'
+            onClick={handleNavigateHome}
+          >
+
+            BACK TO HOME
+
+          </Button>
+
+        </Modal>
+      )}
 
     </main>
   )
