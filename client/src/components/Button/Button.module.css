@@ -1,4 +1,5 @@
 .button {
+    position: relative;
     height: 48px;
     padding-inline: 30px;
     font: inherit;
@@ -6,6 +7,28 @@
     border-radius: 0;
     font: var(--font-sub);
     letter-spacing: var(--space-sub);
+    overflow: hidden;
+}
+
+.button[data-submitting='true'] {
+    opacity: 0.5;
+}
+
+.button[data-submitting='true']::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 35%, var(--clr-white-900) 50%, transparent 65%);
+    opacity: 0.3;
+    animation: submitting-slide 1.3s cubic-bezier(0.7, 0, 0.3, 1) infinite alternate;
+}
+
+@keyframes submitting-slide {
+    from {
+        transform: translateX(-50%);
+    } to {
+        transform: translateX(50%);
+    }
 }
 
 .beige {

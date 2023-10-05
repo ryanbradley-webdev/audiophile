@@ -21,7 +21,7 @@ export default function Checkout() {
   const [checkoutData, dispatch] = useReducer(checkoutReducer, initialCheckout)
 
   const [submitting, setSubmitting] = useState(false)
-  const [success, setSuccess] = useState(true)
+  const [success, setSuccess] = useState(false)
 
   const handleNumberChange = (value: string, type: 'updateZip' | 'updatePin' | 'updateEMoneyNumber') => {
     if (value && (value.match(/[0-9]/g)?.length !== value.length)) return
@@ -43,6 +43,13 @@ export default function Checkout() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    setSubmitting(true)
+
+    setTimeout(() => {
+      setSubmitting(false)
+      setSuccess(true)
+    }, 1500)
   }
 
   return (
@@ -234,8 +241,10 @@ export default function Checkout() {
           <Button
             variant='solid'
             color='beige'
+            disabled={submitting}
+            data-submitting={submitting}
           >
-            CONTINUE & PAY
+            {submitting ? '' : 'CONTINUE & PAY'}
           </Button>
 
         </div>
