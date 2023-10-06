@@ -36,7 +36,7 @@ export default function Hero() {
                 >
                     
                     <Link
-                        to='/headphones/xx99'
+                        to='/headphones/xx99-mark-two-headphones'
                     >
                         SEE PRODUCT
                     </Link>
