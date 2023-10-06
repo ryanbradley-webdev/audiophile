@@ -24,6 +24,14 @@
     color: var(--clr-white-900);
 }
 
+@media screen and (min-width: 769px) {
+    .hero_content {
+        left: min(4%, 165px);
+        transform: translateX(0);
+        align-items: flex-start;
+    }
+}
+
 .hero_content h1 {
     text-transform: uppercase;
 }
@@ -38,11 +46,20 @@
 .hero_content p {
     margin-top: 24px;
     margin-bottom: 28px;
-    opacity: 0.75;
 }
 
 @media screen and (max-width: 480px) {
     .hero_content p {
         margin-inline: 24px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .hero_content h2 {
+        margin-bottom: 24px;
+    }
+
+    .hero_content p {
+        margin-bottom: 40px;
     }
 }
