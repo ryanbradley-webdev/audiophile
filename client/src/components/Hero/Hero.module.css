@@ -10,7 +10,12 @@
 
 .hero_content {
     position: absolute;
-    inset: 0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 379px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +38,11 @@
 .hero_content p {
     margin-top: 24px;
     margin-bottom: 28px;
-    margin-inline: 24px;
     opacity: 0.75;
+}
+
+@media screen and (max-width: 480px) {
+    .hero_content p {
+        margin-inline: 24px;
+    }
 }

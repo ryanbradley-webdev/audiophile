@@ -1,15 +1,21 @@
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import styles from './Hero.module.css'
+import useResponsiveImage from '../../hooks/useResponsiveImage'
 
 export default function Hero() {
+    const imgSize = useResponsiveImage({
+        mobileMax: '(max-width: 480px)',
+        tabletMax: '(max-width: 768px)'
+    })
+
     return (
         <section
             className={styles.hero}
         >
 
             <img
-                src='/hero-mobile.png'
+                src={`hero-${imgSize}.jpg`}
                 alt=''
                 className={styles.hero_img}
             />
