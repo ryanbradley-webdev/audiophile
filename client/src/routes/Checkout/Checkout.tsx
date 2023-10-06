@@ -287,7 +287,7 @@ export default function Checkout() {
                 item={cart[0]}
               />
 
-              {cart.length > 0 && (
+              {cart.length > 1 && (
                 <p>
                   and {cart.length - 1} other item{cart.length - 1 !== 1 && 's'}
                 </p>
