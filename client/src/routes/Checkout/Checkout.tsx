@@ -12,10 +12,12 @@ import CashOnDeliveryIcon from '../../assets/CashOnDeliveryIcon'
 import Modal from '../../components/Modal/Modal'
 import CheckIcon from '../../assets/CheckIcon'
 import { formatCurrency } from '../../util/formatCurrency'
+import { Link } from 'react-router-dom'
 
 export default function Checkout() {
   const {
-    cart
+    cart,
+    emptyCart
   } = useContext(CartContext)
 
   const [checkoutData, dispatch] = useReducer(checkoutReducer, initialCheckout)
@@ -39,6 +41,8 @@ export default function Checkout() {
 
   const handleNavigateHome = () => {
     setSuccess(false)
+
+    emptyCart()
   }
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -258,7 +262,12 @@ export default function Checkout() {
 
           <CheckIcon />
 
-          <h3>
+          <h3
+            style={{
+              marginTop: '24px',
+              marginBottom: '16px'
+            }}
+          >
             THANK YOU FOR YOUR ORDER
           </h3>
           
@@ -266,29 +275,39 @@ export default function Checkout() {
             You will receive an email confirmation shortly.
           </p>
 
-          <div>
+          <div
+            className={styles.confirmation_div}
+          >
 
-            <CartItem
-              item={cart[0]}
-            />
+            <div
+              className={styles.confirmation_summary}
+            >
 
-            {cart.length > 0 && (
+              <CartItem
+                item={cart[0]}
+              />
+
+              {cart.length > 0 && (
+                <p>
+                  and {cart.length - 1} other item{cart.length - 1 !== 1 && 's'}
+                </p>
+              )}
+
+            </div>
+
+            <div
+              className={styles.confirmation_total}
+            >
+
               <p>
-                and {cart.length - 1} other item{cart.length - 1 !== 1 && 's'}
+                GRAND TOTAL
               </p>
-            )}
 
-          <div>
+              <strong>
+                {formatCurrency(calculateCartTotal(cart))}
+              </strong>
 
-            <p>
-              GRAND TOTAL
-            </p>
-
-            <strong>
-              {formatCurrency(calculateCartTotal(cart))}
-            </strong>
-
-          </div>
+            </div>
 
           </div>
 
@@ -298,7 +317,13 @@ export default function Checkout() {
             onClick={handleNavigateHome}
           >
 
-            BACK TO HOME
+            <Link
+              to='/'
+            >
+
+              BACK TO HOME
+
+            </Link>
 
           </Button>
 

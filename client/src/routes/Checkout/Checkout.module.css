@@ -72,3 +72,30 @@
     row-gap: 32px;
     padding-block: 32px;
 }
+
+.confirmation_div {
+    margin-block: 24px;
+    background-color: var(--clr-white-700);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.confirmation_summary {
+    padding: 24px;
+}
+
+.confirmation_summary > p {
+    padding-top: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: -0.21px;
+    text-align: center;
+    border-top: 1px solid #00000036;
+}
+
+.confirmation_total {
+    padding-inline: 24px;
+    padding-block: 16px;
+    color: var(--clr-white-900);
+    background-color: var(--clr-black-900);
+}
