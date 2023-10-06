@@ -33,6 +33,7 @@ type CartContext = {
     decrementQuantity: (id: string) => void
     addItemToCart: (newProduct: CartItem) => void
     emptyCart: () => void
+    total: number
 }
 
 type CheckoutData = {

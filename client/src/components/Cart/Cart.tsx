@@ -4,7 +4,6 @@ import { formatCurrency } from '../../util/formatCurrency'
 import Button from '../Button/Button'
 import styles from './Cart.module.css'
 import { CartContext } from '../../contexts/CartContext'
-import { calculateCartTotal } from '../../util/calculateCartTotal'
 import CartItem from '../CartItem/CartItem'
 
 export default function Cart({
@@ -16,7 +15,8 @@ export default function Cart({
       cart,
       incrementQuantity,
       decrementQuantity,
-      emptyCart
+      emptyCart,
+      total
     } = useContext(CartContext)
 
     return (
@@ -63,7 +63,7 @@ export default function Cart({
                 </p>
 
                 <span>
-                    {formatCurrency(calculateCartTotal(cart))}
+                    {formatCurrency(total)}
                 </span>
 
             </div>

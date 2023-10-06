@@ -5,7 +5,6 @@ import CheckoutCosts from '../../components/CheckoutCosts/CheckoutCosts'
 import Input from '../../components/Input/Input'
 import { CartContext } from '../../contexts/CartContext'
 import styles from './Checkout.module.css'
-import { calculateCartTotal } from '../../util/calculateCartTotal'
 import CartItem from '../../components/CartItem/CartItem'
 import { checkoutReducer, initialCheckout } from './util/checkoutReducer'
 import CashOnDeliveryIcon from '../../assets/CashOnDeliveryIcon'
@@ -17,7 +16,8 @@ import { Link } from 'react-router-dom'
 export default function Checkout() {
   const {
     cart,
-    emptyCart
+    emptyCart,
+    total
   } = useContext(CartContext)
 
   const [checkoutData, dispatch] = useReducer(checkoutReducer, initialCheckout)
@@ -47,6 +47,8 @@ export default function Checkout() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (cart.length === 0) return
 
     setSubmitting(true)
 
@@ -238,8 +240,8 @@ export default function Checkout() {
           </div>
 
           <CheckoutCosts
-            total={calculateCartTotal(cart)}
-            vat={Math.floor(calculateCartTotal(cart) * 0.2)}
+            total={total}
+            vat={Math.floor(total * 0.2)}
           />
 
           <Button
@@ -304,7 +306,7 @@ export default function Checkout() {
               </p>
 
               <strong>
-                {formatCurrency(calculateCartTotal(cart))}
+                {formatCurrency(total)}
               </strong>
 
             </div>
