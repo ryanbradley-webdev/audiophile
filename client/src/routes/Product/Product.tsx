@@ -13,7 +13,10 @@ export default function Product() {
 
     const product = SAMPLE_DATA.find(item => item.slug === slug)
 
-    const mainImg = useResponsiveImage(product?.image, { mobileMax: '(max-width: 480px)', tabletMax: '(max-width: 768px)' })
+    const imgSize = useResponsiveImage({
+        mobileMax: '(max-width: 480px)',
+        tabletMax: '(max-width: 768px)'
+    })
 
     return (
         <section
@@ -33,7 +36,7 @@ export default function Product() {
                         >
 
                             <img
-                                src={mainImg}
+                                src={product.image[imgSize]}
                                 alt={product.name}
                                 width='100%'
                                 height='auto'
@@ -129,7 +132,7 @@ export default function Product() {
                         </div>
 
                         <ImgGrid
-                            images={product.gallery.mobile}
+                            images={product.gallery[imgSize]}
                         />
 
                         <Recommendations

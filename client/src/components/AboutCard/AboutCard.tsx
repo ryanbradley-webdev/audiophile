@@ -1,14 +1,19 @@
-import BestGear from '/image-best-gear-mobile.jpg'
+import useResponsiveImage from '../../hooks/useResponsiveImage'
 import styles from './AboutCard.module.css'
 
 export default function AboutCard() {
+    const imgSize = useResponsiveImage({
+        mobileMax: '(max-width: 480px)',
+        tabletMax: '(max-width: 768px)'
+    })
+
     return (
         <section
             className={styles.card}
         >
             
             <img
-                src={BestGear}
+                src={`image-best-gear-${imgSize}.jpg`}
                 alt=""
             />
 
