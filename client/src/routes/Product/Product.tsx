@@ -6,11 +6,14 @@ import AddToCart from '../../components/AddToCart/AddToCart'
 import ImgGrid from '../../components/ImgGrid/ImgGrid'
 import Recommendations from '../../components/Recommendations/Recommendations'
 import BackLink from '../../components/BackLink/BackLink'
+import useResponsiveImage from '../../hooks/useResponsiveImage'
 
 export default function Product() {
     const { slug } = useParams()
 
     const product = SAMPLE_DATA.find(item => item.slug === slug)
+
+    const mainImg = useResponsiveImage(product?.image, { mobileMax: '(max-width: 480px)', tabletMax: '(max-width: 768px)' })
 
     return (
         <section
@@ -30,7 +33,7 @@ export default function Product() {
                         >
 
                             <img
-                                src={product.image.mobile}
+                                src={mainImg}
                                 alt={product.name}
                                 width='100%'
                                 height='auto'
