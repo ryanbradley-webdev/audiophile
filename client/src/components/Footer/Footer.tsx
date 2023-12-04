@@ -6,69 +6,77 @@ import TwitterIcon from '../../assets/TwitterIcon'
 import InstagramIcon from '../../assets/InstagramIcon'
 
 export default function Footer() {
-    return (
-        <footer
-            className={styles.footer}
+  return (
+    <footer
+      className={styles.footer}
+    >
+
+      <div>
+
+        <Logo />
+
+        <div
+          className={styles.links}
         >
 
-            <Logo />
+          <Link
+            to='/'
+          >
+            HOME
+          </Link>
 
-            <ul
-                className={styles.links}
-            >
+          <Link
+            to='/headphones'
+          >
+            HEADPHONES
+          </Link>
 
-                <Link
-                    to='/'
-                >
-                    HOME
-                </Link>
+          <Link
+            to='/speakers'
+          >
+            SPEAKERS
+          </Link>
 
-                <Link
-                    to='/headphones'
-                >
-                    HEADPHONES
-                </Link>
+          <Link
+            to='/earphones'
+          >
+            EARPHONES
+          </Link>
 
-                <Link
-                    to='/speakers'
-                >
-                    SPEAKERS
-                </Link>
+        </div>
 
-                <Link
-                    to='/earphones'
-                >
-                    EARPHONES
-                </Link>
+      </div>
 
-            </ul>
+      <p>
+        Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.
+      </p>
 
-            <p>
-                Audiophile is an all in one stop to fulfill your audio needs. We&apos;re a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we&apos;re open 7 days a week.
-            </p>
+      <div>
 
-            <p>
-                Copyright 2021. All Rights Reserved.
-            </p>
+        <p>
+          Copyright 2021. All Rights Reserved.
+        </p>
 
-            <div
-                className={styles.socials}
-            >
+        <div
+          className={styles.socials}
+        >
 
-                <button>
-                    <FacebookIcon />
-                </button>
+          <button>
+            <FacebookIcon />
+          </button>
 
-                <button>
-                    <TwitterIcon />
-                </button>
+          <button>
+            <TwitterIcon />
+          </button>
 
-                <button>
-                    <InstagramIcon />
-                </button>
+          <button>
+            <InstagramIcon />
+          </button>
 
-            </div>
+        </div>
 
-        </footer>
-    )
+      </div>
+
+    </footer>
+  )
 }

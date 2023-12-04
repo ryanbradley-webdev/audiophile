@@ -1,55 +1,131 @@
 .footer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-inline: max(40px, calc(50vw - 555px));
+  padding-block: 60px 46px;
+  background-color: var(--clr-black-800);
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
     align-items: center;
-    gap: 48px;
     padding-inline: 24px;
+    gap: 48px;
     padding-block: 54px 38px;
-    background-color: var(--clr-black-800);
+  }
 }
 
 .footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: max(40px, calc(50vw - 555px));
+  width: 101px;
+  height: 4px;
+  background-color: var(--clr-beige-800);
+}
+
+@media screen and (max-width: 480px) {
+  .footer::before {
     left: 50%;
     transform: translateX(-50%);
-    width: 101px;
-    height: 4px;
-    background-color: var(--clr-beige-800);
+  }
+}
+
+.footer > div:first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer > div:first-child {
+    align-items: center;
+    gap: 48px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer > div:first-child {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .links {
-    display: flex;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (max-width: 480px) {
+  .links {
     flex-direction: column;
-    align-items: center;
-    gap: 16px;
+  }
 }
 
 .links a {
-    color: var(--clr-white-900);
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
+  color: var(--clr-white-900);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .footer p {
-    font: var(--font-body);
-    color: var(--clr-white-900);
-    opacity: 0.5;
+  font: var(--font-body);
+  color: var(--clr-white-900);
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 769px) {
+  .footer > p {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer p {
     text-align: center;
+  }
+}
+
+.footer > div:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .footer > div:last-child {
+    flex-direction: column;
+    gap: 48px;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  .footer > div:last-child {
+    margin-top: 48px;
+  }
 }
 
 .socials {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media screen and (min-width: 769px) {
+  .socials {
+    transform: translateY(-63px);
+  }
 }
 
 .socials button {
-    width: fit-content;
-    height: fit-content;
-    background-color: transparent;
-    border: none;
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
 }
