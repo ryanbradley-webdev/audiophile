@@ -1,4 +1,17 @@
-.nav {
+@media screen and (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    padding-block: 32px;
+    background-color: var(--clr-white-900);
     display: flex;
     justify-content: space-between;
     gap: 10px;
@@ -7,52 +20,72 @@
     width: 100%;
     max-width: 1110px;
     margin-inline: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+
+  .nav::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    top: 90px;
+    background-color: var(--clr-black-900);
+    opacity: 0.4;
+    z-index: -1;
+  }
 }
 
-@media screen and (max-width: 480px) {
-    .nav {
-        flex-direction: column;
-        gap: 16px;
-    }
+.desktop_navbar {
+  display: flex;
+  gap: 34px;
+  list-style: none;
+}
+
+.desktop_navbar a {
+  color: var(--clr-white-900);
+}
+
+.desktop_navbar a:is(:hover, :focus) {
+  color: var(--clr-beige-800);
 }
 
 .link {
-    position: relative;
-    width: 100%;
-    padding-bottom: 22px;
-    color: var(--clr-black-900);
-    text-align: center;
-    text-transform: uppercase;
-    isolation: isolate;
+  position: relative;
+  width: 100%;
+  padding-bottom: 22px;
+  color: var(--clr-black-900);
+  text-align: center;
+  text-transform: uppercase;
+  isolation: isolate;
 }
 
 .link::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    top: 48px;
-    background-color: var(--clr-white-700);
-    border-radius: 8px;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  inset: 0;
+  top: 48px;
+  background-color: var(--clr-white-700);
+  border-radius: 8px;
+  z-index: -1;
 }
 
 .link h6 {
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 1.07px;
-    margin-top: -20px;
-    margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1.07px;
+  margin-top: -20px;
+  margin-bottom: 10px;
 }
 
 .shop_btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
 }
 
 .shop_btn span {
-    font: var(--font-sub);
-    letter-spacing: var(--space-sub);
-    opacity: 0.5;
+  font: var(--font-sub);
+  letter-spacing: var(--space-sub);
+  opacity: 0.5;
 }

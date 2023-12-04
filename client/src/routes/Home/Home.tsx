@@ -2,14 +2,26 @@ import { Link } from 'react-router-dom'
 import Button from '../../components/Button/Button'
 import Hero from '../../components/Hero/Hero'
 import Nav from '../../components/Nav/Nav'
-import ZX9 from './images/image-speaker-zx9.png'
-import ZX7 from './images/image-speaker-zx7.jpg'
-import YX1 from './images/image-earphones-yx1.jpg'
 import Background from '/pattern-circles.svg'
 import AboutCard from '../../components/AboutCard/AboutCard'
+import useResponsiveImage from '../../hooks/useResponsiveImage'
+import ZX9Mobile from './images/mobile/image-speaker-zx9.png'
+import ZX7Mobile from './images/mobile/image-speaker-zx7.jpg'
+import YX1Mobile from './images/mobile/image-earphones-yx1.jpg'
+import ZX9Tablet from './images/tablet/image-speaker-zx9.png'
+import ZX7Tablet from './images/tablet/image-speaker-zx7.jpg'
+import YX1Tablet from './images/tablet/image-earphones-yx1.jpg'
+import ZX9Desktop from './images/desktop/image-speaker-zx9.png'
+import ZX7Desktop from './images/desktop/image-speaker-zx7.jpg'
+import YX1Desktop from './images/desktop/image-earphones-yx1.jpg'
 import styles from './Home.module.css'
 
 export default function Home() {
+  const imageSize = useResponsiveImage({
+    mobileMax: '(max-width: 480px)',
+    tabletMax: '(max-width: 768px)'
+  })
+
   return (
     <main
       className={styles.main}
@@ -38,7 +50,7 @@ export default function Home() {
             />
 
             <img
-              src={ZX9}
+              src={FEATURED_IMAGES[imageSize].zx9}
               alt='zx9'
               width='50%'
               height='auto'
@@ -72,7 +84,7 @@ export default function Home() {
         <div
           className={styles.second_product}
           style={{
-              backgroundImage: `url(${ZX7})`
+              backgroundImage: `url(${FEATURED_IMAGES[imageSize].zx7})`
           }}
         >
 
@@ -99,7 +111,7 @@ export default function Home() {
         >
 
           <img
-            src={YX1}
+            src={FEATURED_IMAGES[imageSize].yx1}
             alt=""
           />
 
@@ -131,4 +143,22 @@ export default function Home() {
 
     </main>
   )
+}
+
+const FEATURED_IMAGES = {
+  mobile: {
+    zx9: ZX9Mobile,
+    zx7: ZX7Mobile,
+    yx1: YX1Mobile
+  },
+  tablet: {
+    zx9: ZX9Tablet,
+    zx7: ZX7Tablet,
+    yx1: YX1Tablet
+  },
+  desktop: {
+    zx9: ZX9Desktop,
+    zx7: ZX7Desktop,
+    yx1: YX1Desktop
+  }
 }
