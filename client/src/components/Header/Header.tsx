@@ -7,6 +7,7 @@ import styles from './Header.module.css'
 import useHeaderBackground from '../../hooks/useHeaderBackground'
 import Modal from '../Modal/Modal'
 import Cart from '../Cart/Cart'
+import { Link } from 'react-router-dom'
 
 export default function Header() {
     const [menuVisible, setMenuVisible] = useState(false)
@@ -38,7 +39,14 @@ export default function Header() {
                 />
             )}
 
-            <Logo />
+            <Link
+              to='/'
+              style={{
+                display: 'flex'
+              }}
+            >
+              <Logo />
+            </Link>
 
             <CartIcon
                 onClick={handleToggleCart}

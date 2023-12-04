@@ -10,125 +10,125 @@ import AboutCard from '../../components/AboutCard/AboutCard'
 import styles from './Home.module.css'
 
 export default function Home() {
-    return (
-        <main
-            className={styles.main}
+  return (
+    <main
+      className={styles.main}
+    >
+
+      <Hero />
+
+      <Nav />
+
+      <section
+        className={styles.products}
+      >
+
+        <div
+          className={styles.featured_product}
         >
 
-            <Hero />
+          <div
+            className={styles.img_container}
+          >
 
-            <Nav />
+            <img
+              src={Background}
+              alt=''
+              className={styles.background}
+            />
 
-            <section
-                className={styles.products}
+            <img
+              src={ZX9}
+              alt='zx9'
+              width='50%'
+              height='auto'
+            />
+
+          </div>
+
+          <h2>
+            ZX9<br />SPEAKER
+          </h2>
+
+          <p>
+            Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
+          </p>
+
+          <Button
+            variant='solid'
+            color='black'
+          >
+
+            <Link
+              to='/speakers/zx9-speaker'
+            >
+              SEE PRODUCT
+            </Link>
+
+          </Button>
+
+        </div>
+
+        <div
+          className={styles.second_product}
+          style={{
+              backgroundImage: `url(${ZX7})`
+          }}
+        >
+
+          <h4>
+              ZX7 SPEAKER
+          </h4>
+
+          <Button
+              variant='outline'
+          >
+
+              <Link
+                  to='/speakers/zx7-speaker'
+              >
+                  SEE PRODUCT
+              </Link>
+
+          </Button>
+
+        </div>
+
+        <div
+          className={styles.third_product}
+        >
+
+          <img
+            src={YX1}
+            alt=""
+          />
+
+          <div>
+
+            <h4>
+              YX1 EARPHONES
+            </h4>
+
+            <Button
+              variant='outline'
             >
 
-                <div
-                    className={styles.featured_product}
-                >
+              <Link
+                to='/earphones/yx1-earphones'
+              >
+                SEE PRODUCT
+              </Link>
 
-                    <div
-                        className={styles.img_container}
-                    >
+            </Button>
 
-                        <img
-                            src={Background}
-                            alt=''
-                            className={styles.background}
-                        />
+          </div>
+          
+        </div>
 
-                        <img
-                            src={ZX9}
-                            alt='zx9'
-                            width='50%'
-                            height='auto'
-                        />
+      </section>
 
-                    </div>
+      <AboutCard />
 
-                    <h2>
-                        ZX9<br />SPEAKER
-                    </h2>
-
-                    <p>
-                        Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
-                    </p>
-
-                    <Button
-                        variant='solid'
-                        color='black'
-                    >
-
-                        <Link
-                            to='/speakers/zx9'
-                        >
-                            SEE PRODUCT
-                        </Link>
-
-                    </Button>
-
-                </div>
-
-                <div
-                    className={styles.second_product}
-                    style={{
-                        backgroundImage: `url(${ZX7})`
-                    }}
-                >
-
-                    <h4>
-                        ZX7 SPEAKER
-                    </h4>
-
-                    <Button
-                        variant='outline'
-                    >
-
-                        <Link
-                            to='/speakers/zx7'
-                        >
-                            SEE PRODUCT
-                        </Link>
-
-                    </Button>
-
-                </div>
-
-                <div
-                    className={styles.third_product}
-                >
-
-                    <img
-                        src={YX1}
-                        alt=""
-                    />
-
-                    <div>
-
-                        <h4>
-                            YX1 EARPHONES
-                        </h4>
-
-                        <Button
-                            variant='outline'
-                        >
-
-                            <Link
-                                to='/earphones/yx1'
-                            >
-                                SEE PRODUCT
-                            </Link>
-
-                        </Button>
-
-                    </div>
-                    
-                </div>
-
-            </section>
-
-            <AboutCard />
-
-        </main>
-    )
+    </main>
+  )
 }

@@ -1,32 +1,32 @@
 .card {
-    margin-inline: 24px;
-    margin-block: 120px;
+  margin-inline: 24px;
+  margin-block: 120px;
 }
 
 @media screen and (max-width: 769px) {
-    .card {
-        text-align: center;
-    }
+  .card {
+    text-align: center;
+  }
 }
 
 .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .card h3 {
-    margin-top: 40px;
-    margin-bottom: 32px;
-    font-size: 28px;
-    line-height: normal;
-    letter-spacing: 1px;
+  margin-top: 40px;
+  margin-bottom: 32px;
+  font-size: 28px;
+  line-height: normal;
+  letter-spacing: 1px;
 }
 
 .card h3 span {
-    color: var(--clr-beige-800);
+  color: var(--clr-beige-800);
 }
 
 .card p {
-    opacity: 0.5;
+  opacity: 0.5;
 }

@@ -1,90 +1,90 @@
 .main {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .products {
-    display: grid;
-    row-gap: 24px;
-    padding-inline: 24px;
-    margin-block: 120px;
+  display: grid;
+  row-gap: 24px;
+  padding-inline: 24px;
+  margin-block: 120px;
 }
 
 .featured_product,
 .second_product,
 .third_product > * {
-    border-radius: 8px;
+  border-radius: 8px;
 }
 
 .featured_product {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    padding-inline: 24px;
-    padding-block: 55px;
-    color: var(--clr-white-900);
-    background-color: var(--clr-beige-800);
-    isolation: isolate;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding-inline: 24px;
+  padding-block: 55px;
+  color: var(--clr-white-900);
+  background-color: var(--clr-beige-800);
+  isolation: isolate;
+  overflow: hidden;
 }
 
 .img_container {
-    position: relative;
-    margin-bottom: 12px;
+  position: relative;
+  margin-bottom: 12px;
 }
 
 .background {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 170%;
-    z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 170%;
+  z-index: -1;
 }
 
 .featured_product h2 {
-    font: var(--font-h1);
-    letter-spacing: var(--space-h1);
+  font: var(--font-h1);
+  letter-spacing: var(--space-h1);
 }
 
 .featured_product p {
-    opacity: 0.75;
+  opacity: 0.75;
 }
 
 @media screen and (max-width: 769px) {
-    .featured_product {
-        text-align: center;
-    }
+  .featured_product {
+    text-align: center;
+  }
 }
 
 .second_product {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 32px;
-    height: 320px;
-    padding-inline: 24px;
-    background-size: cover;
-    background-position: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  height: 320px;
+  padding-inline: 24px;
+  background-size: cover;
+  background-position: right;
 }
 
 .third_product {
-    display: grid;
-    gap: 24px;
+  display: grid;
+  gap: 24px;
 }
 
 .third_product img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .third_product div {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-    padding-inline: 24px;
-    padding-block: 40px;
-    background-color: var(--clr-white-700);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding-inline: 24px;
+  padding-block: 40px;
+  background-color: var(--clr-white-700);
 }
